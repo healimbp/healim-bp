@@ -17,7 +17,7 @@ if (fs.existsSync(envPath)) {
   });
 }
 
-const BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN || '8583202554:AAGzom19rWFN1UwN6MzYj7ctDvS2hiua8WU';
+const BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN || '8714560419:AAGq9Ufb2jLTKVUGQFdW4Rb574oGNYZCq30';
 const CHAT_ID = process.env.TELEGRAM_CHAT_ID || '2026055528';
 
 // CLI args
