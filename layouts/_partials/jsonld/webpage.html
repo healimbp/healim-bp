@@ -1,0 +1,62 @@
+{{- $page := .page -}}
+{{- $summary := .summary -}}
+
+{{- $language := $page.Language.Locale | default site.Language.Locale | default "ko-KR" -}}
+{{- $description := $summary | default ($page.Params.summary | default $page.Summary) -}}
+{{- if and (not $description) $page.IsHome -}}
+  {{- $description = site.Params.hugoblox.identity.description -}}
+{{- end -}}
+{{- $description = $description | plainify -}}
+
+{{- $featured_image := partial "functions/get_featured_image" $page -}}
+{{- $image_url := "images/director.jpg" | absURL -}}
+{{- if $featured_image -}}
+  {{- $image_url = $featured_image.Permalink -}}
+{{- end -}}
+
+{{- $page_name := $page.LinkTitle | default $page.Title | plainify -}}
+{{- if $page.IsHome -}}
+  {{- $page_name = site.Title -}}
+{{- end -}}
+
+{{- $webpage := dict
+  "@context" "https://schema.org"
+  "@type" "WebPage"
+  "@id" (printf "%s#webpage" $page.Permalink)
+  "url" $page.Permalink
+  "name" $page_name
+  "inLanguage" $language
+  "isPartOf" (dict
+    "@type" "WebSite"
+    "@id" (printf "%s#website" site.BaseURL)
+    "url" site.BaseURL
+    "name" site.Title
+  )
+  "about" (dict
+    "@id" (printf "%s#clinic" site.BaseURL)
+  )
+  "primaryImageOfPage" (dict
+    "@type" "ImageObject"
+    "@id" (printf "%s#logo" site.BaseURL)
+    "url" $image_url
+  )
+  "breadcrumb" (dict
+    "@id" (printf "%s#breadcrumb" $page.Permalink)
+  )
+-}}
+
+{{- if $description }}
+  {{- $webpage = merge $webpage (dict "description" $description) -}}
+{{- end -}}
+
+{{- if not $page.Date.IsZero }}
+  {{- $webpage = merge $webpage (dict "datePublished" ($page.Date.Format "2006-01-02T15:04:05Z07:00")) -}}
+{{- end -}}
+
+{{- if not $page.Lastmod.IsZero }}
+  {{- $webpage = merge $webpage (dict "dateModified" ($page.Lastmod.Format "2006-01-02T15:04:05Z07:00")) -}}
+{{- end -}}
+
+<script type="application/ld+json">
+{{ $webpage | jsonify (dict "indent" "  ") | safeJS }}
+</script>

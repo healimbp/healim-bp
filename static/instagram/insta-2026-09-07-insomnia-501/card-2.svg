@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <svg width="1080" height="1080" viewBox="0 0 1080 1080" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#05101d" />
+        <stop offset="50%" stop-color="#0b1e36" />
+        <stop offset="100%" stop-color="#040b14" />
+      </linearGradient>
+      <filter id="blurEffect" x="-50%" y="-50%" width="200%" height="200%">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="120" />
+      </filter>
+    </defs>
+
+    
+    <!-- Background Gradient -->
+    <rect x="0" y="0" width="1080" height="1080" fill="url(#bgGrad)" />
+    <!-- Ambient Glow Effects -->
+    <circle cx="950" cy="120" r="380" fill="#7c3aed" opacity="0.18" filter="url(#blurEffect)" />
+    <circle cx="100" cy="950" r="320" fill="#7c3aed" opacity="0.12" filter="url(#blurEffect)" />
+
+    <!-- Top Header Bar -->
+    <g transform="translate(60, 55)">
+      <rect x="0" y="0" width="960" height="66" rx="33" fill="rgba(255, 255, 255, 0.07)" stroke="rgba(255, 255, 255, 0.14)" stroke-width="1.5" />
+      <circle cx="40" cy="33" r="18" fill="#7c3aed" />
+      <text x="40" y="40" font-size="16" font-weight="900" fill="#ffffff" text-anchor="middle" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">H</text>
+      <text x="75" y="41" font-size="22" font-weight="700" fill="#ffffff" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">해아림한의원 인천부평점</text>
+      <rect x="850" y="15" width="85" height="36" rx="18" fill="rgba(255, 255, 255, 0.12)" />
+      <text x="892" y="40" font-size="17" font-weight="700" fill="#a78bfa" text-anchor="middle" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">2 / 5</text>
+    </g>
+  
+    
+      <g transform="translate(60, 160)">
+        <text x="0" y="0" font-size="20" font-weight="800" fill="#a78bfa" letter-spacing="2" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">STEP 01 ｜ SYMPTOMS CHECK</text>
+        <text x="0" y="55" font-size="44" font-weight="800" fill="#ffffff" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">혹시 이런 증상 겪고 계신가요?</text>
+        <text x="0" y="105" font-size="22" font-weight="500" fill="#94a3b8" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">아래 항목 중 2개 이상 해당된다면 초기 진단이 필요합니다.</text>
+      </g>
+
+      <g transform="translate(60, 310)">
+        
+          <g transform="translate(0, 0)">
+            <rect x="0" y="0" width="960" height="110" rx="20" fill="rgba(255, 255, 255, 0.05)" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1.5" />
+            <circle cx="55" cy="55" r="26" fill="#7c3aed" fill-opacity="0.3" />
+            <text x="55" y="64" font-size="24" font-weight="900" fill="#a78bfa" text-anchor="middle" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">V</text>
+            <text x="110" y="64" font-size="24" font-weight="700" fill="#f8fafc" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">
+              잠자리에 눕고 30분 이상 뒤척이는 입면장애
+            </text>
+          </g>
+        
+          <g transform="translate(0, 135)">
+            <rect x="0" y="0" width="960" height="110" rx="20" fill="rgba(255, 255, 255, 0.05)" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1.5" />
+            <circle cx="55" cy="55" r="26" fill="#7c3aed" fill-opacity="0.3" />
+            <text x="55" y="64" font-size="24" font-weight="900" fill="#a78bfa" text-anchor="middle" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">V</text>
+            <text x="110" y="64" font-size="24" font-weight="700" fill="#f8fafc" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">
+              새벽에 2~3번씩 깨어나 다시 잠들기 어려움
+            </text>
+          </g>
+        
+          <g transform="translate(0, 270)">
+            <rect x="0" y="0" width="960" height="110" rx="20" fill="rgba(255, 255, 255, 0.05)" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1.5" />
+            <circle cx="55" cy="55" r="26" fill="#7c3aed" fill-opacity="0.3" />
+            <text x="55" y="64" font-size="24" font-weight="900" fill="#a78bfa" text-anchor="middle" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">V</text>
+            <text x="110" y="64" font-size="24" font-weight="700" fill="#f8fafc" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">
+              자고 일어나도 개운하지 않고 온몸이 무거움
+            </text>
+          </g>
+        
+          <g transform="translate(0, 405)">
+            <rect x="0" y="0" width="960" height="110" rx="20" fill="rgba(255, 255, 255, 0.05)" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1.5" />
+            <circle cx="55" cy="55" r="26" fill="#7c3aed" fill-opacity="0.3" />
+            <text x="55" y="64" font-size="24" font-weight="900" fill="#a78bfa" text-anchor="middle" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">V</text>
+            <text x="110" y="64" font-size="24" font-weight="700" fill="#f8fafc" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">
+              낮 동안 극심한 뇌피로와 두통, 집중력 저하
+            </text>
+          </g>
+        
+      </g>
+
+      <!-- Warning Banner -->
+      <g transform="translate(60, 870)">
+        <rect x="0" y="0" width="960" height="70" rx="16" fill="rgba(239, 68, 68, 0.18)" stroke="rgba(239, 68, 68, 0.35)" stroke-width="1.5" />
+        <text x="480" y="43" font-size="20" font-weight="700" fill="#fca5a5" text-anchor="middle" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">
+          [주의] 증상이 만성화되면 자율신경계 피로와 뇌기능 저하로 이어질 수 있습니다
+        </text>
+      </g>
+    
+    
+    <!-- Bottom Footer Bar -->
+    <g transform="translate(60, 970)">
+      <line x1="0" y1="0" x2="960" y2="0" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1" />
+      <text x="0" y="38" font-size="19" font-weight="600" fill="#94a3b8" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">
+        부평대로 24 (부평역 5번 출구) ｜ 032-506-1075
+      </text>
+      <text x="960" y="38" font-size="19" font-weight="700" fill="#a78bfa" text-anchor="end" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">
+        옆으로 넘겨보기 ▶
+      </text>
+    </g>
+  
+  </svg>

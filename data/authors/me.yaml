@@ -1,0 +1,20 @@
+schema: hugoblox/author/v1
+slug: me
+is_owner: true
+name:
+  display: "권형근 대표원장"
+role: "한방침구과 전문의 • 해아림한의원 인천부평점"
+bio: "공황장애, 불면증, 자율신경실조증, 우울증, 틱장애, ADHD 1:1 맞춤 한방 치료"
+
+affiliations:
+  - name: ''
+    url: ''
+
+links:
+  - icon: at-symbol
+    url: mailto:hello@example.com
+    label: Email
+  - icon: brands/github
+    url: https://github.com/
+  - icon: brands/linkedin
+    url: https://www.linkedin.com/

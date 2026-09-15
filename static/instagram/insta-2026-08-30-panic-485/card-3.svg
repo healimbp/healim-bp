@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <svg width="1080" height="1080" viewBox="0 0 1080 1080" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#05101d" />
+        <stop offset="50%" stop-color="#0b1e36" />
+        <stop offset="100%" stop-color="#040b14" />
+      </linearGradient>
+      <filter id="blurEffect" x="-50%" y="-50%" width="200%" height="200%">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="120" />
+      </filter>
+    </defs>
+
+    
+    <!-- Background Gradient -->
+    <rect x="0" y="0" width="1080" height="1080" fill="url(#bgGrad)" />
+    <!-- Ambient Glow Effects -->
+    <circle cx="950" cy="120" r="380" fill="#0284c7" opacity="0.18" filter="url(#blurEffect)" />
+    <circle cx="100" cy="950" r="320" fill="#0284c7" opacity="0.12" filter="url(#blurEffect)" />
+
+    <!-- Top Header Bar -->
+    <g transform="translate(60, 55)">
+      <rect x="0" y="0" width="960" height="66" rx="33" fill="rgba(255, 255, 255, 0.07)" stroke="rgba(255, 255, 255, 0.14)" stroke-width="1.5" />
+      <circle cx="40" cy="33" r="18" fill="#0284c7" />
+      <text x="40" y="40" font-size="16" font-weight="900" fill="#ffffff" text-anchor="middle" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">H</text>
+      <text x="75" y="41" font-size="22" font-weight="700" fill="#ffffff" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">해아림한의원 인천부평점</text>
+      <rect x="850" y="15" width="85" height="36" rx="18" fill="rgba(255, 255, 255, 0.12)" />
+      <text x="892" y="40" font-size="17" font-weight="700" fill="#38bdf8" text-anchor="middle" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">3 / 5</text>
+    </g>
+  
+    
+      <g transform="translate(60, 160)">
+        <text x="0" y="0" font-size="20" font-weight="800" fill="#38bdf8" letter-spacing="2" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">STEP 02 ｜ ROOT CAUSE</text>
+        <text x="0" y="55" font-size="44" font-weight="800" fill="#ffffff" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">왜 이런 증상이 나타날까요?</text>
+        <text x="0" y="105" font-size="22" font-weight="500" fill="#94a3b8" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">단순한 심리 문제가 아닌 신경계 신호 체계의 이상입니다.</text>
+      </g>
+
+      <g transform="translate(60, 310)">
+        <!-- Cause Box 1 -->
+        <g transform="translate(0, 0)">
+          <rect x="0" y="0" width="960" height="250" rx="24" fill="rgba(15, 23, 42, 0.88)" stroke="#0284c7" stroke-width="1.5" stroke-opacity="0.6" />
+          <rect x="40" y="35" width="100" height="38" rx="19" fill="#0369a1" />
+          <text x="90" y="60" font-size="17" font-weight="800" fill="#ffffff" text-anchor="middle" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">원인 01</text>
+          
+          <text x="160" y="62" font-size="27" font-weight="800" fill="#ffffff" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">
+            편도체 과흥분 및 자율신경 불균형
+          </text>
+          
+          <text font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">
+            <tspan x="40" y="130" font-size="22" font-weight="500" fill="#cbd5e1" text-anchor="start">뇌의 불안 스위치인 편도체가 지나치게 민감해져 교감신경을</tspan><tspan x="40" y="168" font-size="22" font-weight="500" fill="#cbd5e1" text-anchor="start">급격히 항진시킵니다.</tspan>
+          </text>
+        </g>
+
+        <!-- Cause Box 2 -->
+        <g transform="translate(0, 280)">
+          <rect x="0" y="0" width="960" height="250" rx="24" fill="rgba(15, 23, 42, 0.88)" stroke="#0284c7" stroke-width="1.5" stroke-opacity="0.6" />
+          <rect x="40" y="35" width="100" height="38" rx="19" fill="#0369a1" />
+          <text x="90" y="60" font-size="17" font-weight="800" fill="#ffffff" text-anchor="middle" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">원인 02</text>
+          
+          <text x="160" y="62" font-size="27" font-weight="800" fill="#ffffff" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">
+            심담허겁(心膽虛怯) 체질적 요인
+          </text>
+          
+          <text font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">
+            <tspan x="40" y="130" font-size="22" font-weight="500" fill="#cbd5e1" text-anchor="start">심장과 담의 기운이 약해져 사소한 자극에도 쉽게 놀라고 불안이</tspan><tspan x="40" y="168" font-size="22" font-weight="500" fill="#cbd5e1" text-anchor="start">만성화됩니다.</tspan>
+          </text>
+        </g>
+      </g>
+
+      <!-- Key Insight -->
+      <g transform="translate(60, 870)">
+        <rect x="0" y="0" width="960" height="70" rx="16" fill="rgba(255, 255, 255, 0.08)" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1" />
+        <text x="480" y="43" font-size="20" font-weight="700" fill="#38bdf8" text-anchor="middle" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">
+          핵심 ｜ 증상 억제가 아닌 "자율신경계와 뇌기능의 스스로 조절력"을 키워야 합니다
+        </text>
+      </g>
+    
+    
+    <!-- Bottom Footer Bar -->
+    <g transform="translate(60, 970)">
+      <line x1="0" y1="0" x2="960" y2="0" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1" />
+      <text x="0" y="38" font-size="19" font-weight="600" fill="#94a3b8" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">
+        부평대로 24 (부평역 5번 출구) ｜ 032-506-1075
+      </text>
+      <text x="960" y="38" font-size="19" font-weight="700" fill="#38bdf8" text-anchor="end" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">
+        옆으로 넘겨보기 ▶
+      </text>
+    </g>
+  
+  </svg>

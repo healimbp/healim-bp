@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <svg width="1080" height="1080" viewBox="0 0 1080 1080" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#05101d" />
+        <stop offset="50%" stop-color="#0b1e36" />
+        <stop offset="100%" stop-color="#040b14" />
+      </linearGradient>
+      <filter id="blurEffect" x="-50%" y="-50%" width="200%" height="200%">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="120" />
+      </filter>
+    </defs>
+
+    
+    <!-- Background Gradient -->
+    <rect x="0" y="0" width="1080" height="1080" fill="url(#bgGrad)" />
+    <!-- Ambient Glow Effects -->
+    <circle cx="950" cy="120" r="380" fill="#059669" opacity="0.18" filter="url(#blurEffect)" />
+    <circle cx="100" cy="950" r="320" fill="#059669" opacity="0.12" filter="url(#blurEffect)" />
+
+    <!-- Top Header Bar -->
+    <g transform="translate(60, 55)">
+      <rect x="0" y="0" width="960" height="66" rx="33" fill="rgba(255, 255, 255, 0.07)" stroke="rgba(255, 255, 255, 0.14)" stroke-width="1.5" />
+      <circle cx="40" cy="33" r="18" fill="#059669" />
+      <text x="40" y="40" font-size="16" font-weight="900" fill="#ffffff" text-anchor="middle" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">H</text>
+      <text x="75" y="41" font-size="22" font-weight="700" fill="#ffffff" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">해아림한의원 인천부평점</text>
+      <rect x="850" y="15" width="85" height="36" rx="18" fill="rgba(255, 255, 255, 0.12)" />
+      <text x="892" y="40" font-size="17" font-weight="700" fill="#34d399" text-anchor="middle" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">5 / 5</text>
+    </g>
+  
+    
+      <g transform="translate(60, 160)">
+        <text x="0" y="0" font-size="20" font-weight="800" fill="#34d399" letter-spacing="2" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">ABOUT US ｜ 해아림한의원 인천부평점</text>
+        <text x="0" y="55" font-size="44" font-weight="800" fill="#ffffff" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">마음과 두뇌 질환, 함께 치유합니다</text>
+        <text x="0" y="105" font-size="22" font-weight="500" fill="#94a3b8" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">풍부한 임상과 연구를 바탕으로 정성을 다한 1:1 맞춤 진료를 제공합니다.</text>
+      </g>
+
+      <!-- Profile & Location Card -->
+      <g transform="translate(60, 300)">
+        <rect x="0" y="0" width="960" height="520" rx="28" fill="rgba(15, 23, 42, 0.92)" stroke="#059669" stroke-width="2" stroke-opacity="0.6" />
+        
+        <!-- Doctor Info Header -->
+        <g transform="translate(50, 45)">
+          <rect x="0" y="0" width="70" height="70" rx="20" fill="#047857" />
+          <text x="35" y="45" font-size="22" font-weight="900" fill="#ffffff" text-anchor="middle" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">원장</text>
+          <text x="95" y="38" font-size="30" font-weight="800" fill="#ffffff" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">권형근 대표원장</text>
+          <text x="95" y="72" font-size="20" font-weight="600" fill="#34d399" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">한의학 박사 ｜ 뇌신경·자율신경 중점 진료</text>
+        </g>
+
+        <!-- Divider -->
+        <line x1="50" y1="145" x2="910" y2="145" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1.5" />
+
+        <!-- Key Clinic Features -->
+        <g transform="translate(50, 175)">
+          <!-- Subject -->
+          <g transform="translate(0, 0)">
+            <rect x="0" y="0" width="120" height="32" rx="16" fill="rgba(255, 255, 255, 0.08)" />
+            <text x="60" y="22" font-size="16" font-weight="700" fill="#34d399" text-anchor="middle" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">주요 진료과목</text>
+            <text x="0" y="65" font-size="21" font-weight="600" fill="#f1f5f9" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">공황장애 · 불면증 · 자율신경실조증 · 소아틱장애/ADHD · 우울/화병</text>
+          </g>
+
+          <!-- Location -->
+          <g transform="translate(0, 110)">
+            <rect x="0" y="0" width="95" height="32" rx="16" fill="rgba(255, 255, 255, 0.08)" />
+            <text x="47" y="22" font-size="16" font-weight="700" fill="#34d399" text-anchor="middle" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">오시는 길</text>
+            <text x="0" y="65" font-size="21" font-weight="600" fill="#f1f5f9" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">인천광역시 부평구 부평대로 24 (부평역 5번 출구 인근)</text>
+          </g>
+
+          <!-- Contact -->
+          <g transform="translate(0, 220)">
+            <rect x="0" y="0" width="145" height="32" rx="16" fill="rgba(255, 255, 255, 0.08)" />
+            <text x="72" y="22" font-size="16" font-weight="700" fill="#34d399" text-anchor="middle" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">예약 및 상담 문의</text>
+            <text x="0" y="65" font-size="23" font-weight="800" fill="#4ade80" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">전화: 032-506-1075 ｜ 카카오톡: @해아림한의원인천부평점</text>
+          </g>
+        </g>
+      </g>
+
+      <!-- Bottom Save Banner -->
+      <g transform="translate(60, 850)">
+        <rect x="0" y="0" width="960" height="85" rx="18" fill="#047857" />
+        <text x="480" y="52" font-size="22" font-weight="800" fill="#ffffff" text-anchor="middle" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">
+          이 피드를 저장해 두시고 필요할 때 언제든 다시 확인해보세요!
+        </text>
+      </g>
+    
+    
+    <!-- Bottom Footer Bar -->
+    <g transform="translate(60, 970)">
+      <line x1="0" y1="0" x2="960" y2="0" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1" />
+      <text x="0" y="38" font-size="19" font-weight="600" fill="#94a3b8" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">
+        부평대로 24 (부평역 5번 출구) ｜ 032-506-1075
+      </text>
+      <text x="960" y="38" font-size="19" font-weight="700" fill="#34d399" text-anchor="end" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">
+        피드 저장 &amp; 공유하기 ★
+      </text>
+    </g>
+  
+  </svg>

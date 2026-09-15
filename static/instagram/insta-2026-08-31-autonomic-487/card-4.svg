@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <svg width="1080" height="1080" viewBox="0 0 1080 1080" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#05101d" />
+        <stop offset="50%" stop-color="#0b1e36" />
+        <stop offset="100%" stop-color="#040b14" />
+      </linearGradient>
+      <filter id="blurEffect" x="-50%" y="-50%" width="200%" height="200%">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="120" />
+      </filter>
+    </defs>
+
+    
+    <!-- Background Gradient -->
+    <rect x="0" y="0" width="1080" height="1080" fill="url(#bgGrad)" />
+    <!-- Ambient Glow Effects -->
+    <circle cx="950" cy="120" r="380" fill="#059669" opacity="0.18" filter="url(#blurEffect)" />
+    <circle cx="100" cy="950" r="320" fill="#059669" opacity="0.12" filter="url(#blurEffect)" />
+
+    <!-- Top Header Bar -->
+    <g transform="translate(60, 55)">
+      <rect x="0" y="0" width="960" height="66" rx="33" fill="rgba(255, 255, 255, 0.07)" stroke="rgba(255, 255, 255, 0.14)" stroke-width="1.5" />
+      <circle cx="40" cy="33" r="18" fill="#059669" />
+      <text x="40" y="40" font-size="16" font-weight="900" fill="#ffffff" text-anchor="middle" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">H</text>
+      <text x="75" y="41" font-size="22" font-weight="700" fill="#ffffff" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">해아림한의원 인천부평점</text>
+      <rect x="850" y="15" width="85" height="36" rx="18" fill="rgba(255, 255, 255, 0.12)" />
+      <text x="892" y="40" font-size="17" font-weight="700" fill="#34d399" text-anchor="middle" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">4 / 5</text>
+    </g>
+  
+    
+      <g transform="translate(60, 160)">
+        <text x="0" y="0" font-size="20" font-weight="800" fill="#34d399" letter-spacing="2" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">STEP 03 ｜ TREATMENT</text>
+        <text x="0" y="55" font-size="44" font-weight="800" fill="#ffffff" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">해아림 1:1 맞춤 치료 솔루션</text>
+        <text x="0" y="105" font-size="22" font-weight="500" fill="#94a3b8" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">신경계 회복력과 오장육부 밸런스를 동시에 되찾아 드립니다.</text>
+      </g>
+
+      <g transform="translate(60, 300)">
+        <!-- 4 Grid Solution Cards -->
+        
+            <g transform="translate(0, 0)">
+              <rect x="0" y="0" width="465" height="235" rx="22" fill="rgba(15, 23, 42, 0.88)" stroke="#059669" stroke-width="1.5" stroke-opacity="0.55" />
+              <circle cx="50" cy="50" r="22" fill="#047857" />
+              <text x="50" y="57" font-size="16" font-weight="800" fill="#ffffff" text-anchor="middle" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">01</text>
+              <text x="88" y="58" font-size="22" font-weight="700" fill="#ffffff" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">자율신경 청뇌단·한약</text>
+              <text font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">
+                <tspan x="30" y="115" font-size="19" font-weight="500" fill="#cbd5e1" text-anchor="start">자율신경 중추 안정 및 활력</tspan><tspan x="30" y="147" font-size="19" font-weight="500" fill="#cbd5e1" text-anchor="start">에너지 충전</tspan>
+              </text>
+            </g>
+          
+            <g transform="translate(495, 0)">
+              <rect x="0" y="0" width="465" height="235" rx="22" fill="rgba(15, 23, 42, 0.88)" stroke="#059669" stroke-width="1.5" stroke-opacity="0.55" />
+              <circle cx="50" cy="50" r="22" fill="#047857" />
+              <text x="50" y="57" font-size="16" font-weight="800" fill="#ffffff" text-anchor="middle" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">02</text>
+              <text x="88" y="58" font-size="22" font-weight="700" fill="#ffffff" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">경추·흉추 교정 및 약침</text>
+              <text font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">
+                <tspan x="30" y="115" font-size="19" font-weight="500" fill="#cbd5e1" text-anchor="start">자율신경절이 지나는 척추 신경</tspan><tspan x="30" y="147" font-size="19" font-weight="500" fill="#cbd5e1" text-anchor="start">압박 해소</tspan>
+              </text>
+            </g>
+          
+            <g transform="translate(0, 260)">
+              <rect x="0" y="0" width="465" height="235" rx="22" fill="rgba(15, 23, 42, 0.88)" stroke="#059669" stroke-width="1.5" stroke-opacity="0.55" />
+              <circle cx="50" cy="50" r="22" fill="#047857" />
+              <text x="50" y="57" font-size="16" font-weight="800" fill="#ffffff" text-anchor="middle" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">03</text>
+              <text x="88" y="58" font-size="22" font-weight="700" fill="#ffffff" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">뇌파·체열·간이정신진단 검사</text>
+              <text font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">
+                <tspan x="30" y="115" font-size="19" font-weight="500" fill="#cbd5e1" text-anchor="start">두뇌 활성도와 체열 불균형을</tspan><tspan x="30" y="147" font-size="19" font-weight="500" fill="#cbd5e1" text-anchor="start">과학적으로 분석</tspan>
+              </text>
+            </g>
+          
+            <g transform="translate(495, 260)">
+              <rect x="0" y="0" width="465" height="235" rx="22" fill="rgba(15, 23, 42, 0.88)" stroke="#059669" stroke-width="1.5" stroke-opacity="0.55" />
+              <circle cx="50" cy="50" r="22" fill="#047857" />
+              <text x="50" y="57" font-size="16" font-weight="800" fill="#ffffff" text-anchor="middle" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">04</text>
+              <text x="88" y="58" font-size="22" font-weight="700" fill="#ffffff" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">부교감 활성 호흡 요법</text>
+              <text font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">
+                <tspan x="30" y="115" font-size="19" font-weight="500" fill="#cbd5e1" text-anchor="start">일상에서 밸런스를 되찾는 맞춤</tspan><tspan x="30" y="147" font-size="19" font-weight="500" fill="#cbd5e1" text-anchor="start">코칭</tspan>
+              </text>
+            </g>
+          
+      </g>
+
+      <!-- Bottom Principle -->
+      <g transform="translate(60, 850)">
+        <rect x="0" y="0" width="960" height="85" rx="18" fill="rgba(255, 255, 255, 0.06)" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1" />
+        <text x="480" y="52" font-size="21" font-weight="700" fill="#fde047" text-anchor="middle" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">
+          "재발 없는 건강한 일상으로의 복귀를 약속합니다"
+        </text>
+      </g>
+    
+    
+    <!-- Bottom Footer Bar -->
+    <g transform="translate(60, 970)">
+      <line x1="0" y1="0" x2="960" y2="0" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1" />
+      <text x="0" y="38" font-size="19" font-weight="600" fill="#94a3b8" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">
+        부평대로 24 (부평역 5번 출구) ｜ 032-506-1075
+      </text>
+      <text x="960" y="38" font-size="19" font-weight="700" fill="#34d399" text-anchor="end" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">
+        옆으로 넘겨보기 ▶
+      </text>
+    </g>
+  
+  </svg>

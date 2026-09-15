@@ -1,0 +1,41 @@
+{{ $page := .page }}
+{{ $summary := .summary }}
+
+{{- if $page.IsHome -}}
+
+  {{ partialCached "jsonld/website.html" $page }}
+  {{ partial "jsonld/webpage.html" (dict "page" $page "summary" $summary) }}
+  {{ partial "jsonld/business.html" $page }}
+  {{ partial "jsonld/breadcrumbs.html" (dict "page" $page) }}
+
+{{- else if $page.IsPage -}}
+
+  {{ if (eq $page.Type "blog") | or (eq $page.Type "column") | or (eq $page.Type "posts") | or (eq $page.Type "publications") | or (eq $page.Type "projects") }}
+    {{ partial "jsonld/article.html" (dict "page" $page "summary" $summary) }}
+  {{ end }}
+
+  {{ if eq $page.Type "events" }}
+    {{ partial "jsonld/event.html" (dict "page" $page "summary" $summary) }}
+  {{ end }}
+
+  {{ if eq $page.Type "questions" }}
+    {{ partial "jsonld/qapage.html" (dict "page" $page "summary" $summary) }}
+  {{ end }}
+
+  {{ if eq $page.Type "faq" }}
+    {{ partial "jsonld/faqpage.html" (dict "page" $page "summary" $summary) }}
+  {{ end }}
+
+  {{ partial "jsonld/webpage.html" (dict "page" $page "summary" $summary) }}
+  {{ partial "jsonld/breadcrumbs.html" (dict "page" $page) }}
+
+{{- else -}}
+
+  {{ partial "jsonld/collectionpage.html" (dict "page" $page "summary" $summary) }}
+  {{ partial "jsonld/breadcrumbs.html" (dict "page" $page) }}
+
+{{- end }}
+
+{{ if or ($page.Params.faq_page) ($page.Params.faqs) }}
+  {{ partial "jsonld/faqpage.html" (dict "page" $page "summary" $summary) }}
+{{ end }}

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" fill="none">
+  <!-- 둥근 모서리 배경 (고급스러운 딥 그린) -->
+  <rect width="100" height="100" rx="24" fill="#2F5D50"/>
+  
+  <!-- 해아림 심볼 마크 (순백색) -->
+  <g transform="translate(10, 8)">
+    <path d="M40 18 C22 18 10 32 10 48 C10 64 24 76 40 76 C54 76 66 66 68 52 C70 44 65 35 56 31 C47 27 36 30 32 37 C28 44 31 52 38 56 C44 59 51 56 54 50" 
+          stroke="#ffffff" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="40" cy="46" r="7.5" fill="#ffffff"/>
+  </g>
+</svg>

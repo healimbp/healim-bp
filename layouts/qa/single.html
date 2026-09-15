@@ -1,0 +1,256 @@
+{{ define "main" }}
+<div class="w-full max-w-4xl mx-auto py-8 px-4 sm:px-6 space-y-8">
+
+  <!-- Breadcrumb & Back Link -->
+  <div class="flex items-center justify-between text-xs text-[#68736E] border-b border-[#DDE6E1] pb-3">
+    <div class="flex items-center gap-2">
+      <a href="/" class="hover:text-[#2F5D50]">홈</a>
+      <span>›</span>
+      <a href="/qa/" class="hover:text-[#2F5D50]">Q&A 상담사례</a>
+      {{ if .Params.category }}
+      <span>›</span>
+      <span class="text-[#2F5D50] font-bold">{{ .Params.category }}</span>
+      {{ end }}
+    </div>
+    <a href="/qa/" class="inline-flex items-center gap-1 font-bold text-[#2F5D50] hover:underline">
+      <i class="fa-solid fa-arrow-left text-[10px]"></i>
+      <span>Q&A 목록으로</span>
+    </a>
+  </div>
+
+  <!-- Q&A Header -->
+  <header class="space-y-3">
+    <div class="flex items-center gap-2 flex-wrap">
+      <span class="px-2.5 py-1 rounded-full bg-[#2F5D50] text-white font-extrabold text-[11px] uppercase tracking-wider">
+        Q&A 상담 사례
+      </span>
+      {{ if .Params.category }}
+      <span class="heal-tag bg-[#EAF3EF] text-[#2F5D50] font-bold text-xs">
+        {{ .Params.category }}
+      </span>
+      {{ end }}
+      {{ if .Params.location }}
+      <span class="px-2.5 py-0.5 rounded-full bg-[#F2F7F4] text-[#53615B] font-semibold text-xs border border-[#DDE6E1]">
+        {{ .Params.location }}
+      </span>
+      {{ end }}
+    </div>
+    
+    <h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#26332E] leading-tight">
+      {{ .Title }}
+    </h1>
+
+    <div class="flex items-center justify-between flex-wrap gap-3 pt-3 border-t border-[#F2F7F4] text-xs text-[#68736E]">
+      <div class="flex items-center gap-2">
+        <span class="font-bold text-[#26332E]">답변 주치의: 권형근 대표원장</span>
+        <span>•</span>
+        <span>해아림한의원 인천부평점</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span><i class="fa-regular fa-calendar mr-1"></i>{{ .Date.Format "2006년 01월 02일" }}</span>
+        <span>•</span>
+        <span><i class="fa-solid fa-comments mr-1 text-[#2F5D50]"></i>1:1 전문 상담</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- 1. Patient Question Box (환자 질문 박스) -->
+  <div class="bg-[#FAF8F3] border-2 border-[#EADFCB] rounded-2xl p-6 sm:p-7 space-y-4 shadow-xs relative">
+    <div class="flex items-center justify-between flex-wrap gap-2 border-b border-[#E3D4BC] pb-3">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full bg-[#E87A5D] text-white flex items-center justify-center font-extrabold text-lg shadow-sm">
+          Q
+        </div>
+        <div>
+          <div class="font-extrabold text-sm sm:text-base text-[#26332E]">
+            {{ with .Params.patient_info }}{{ . }}{{ else }}환자 / 보호자 상담 질문{{ end }}
+          </div>
+          <div class="text-[11px] text-[#8C7A68]">
+            상담 분야: <strong class="text-[#594B3E]">{{ with .Params.category }}{{ . }}{{ else }}신경정신과 클리닉{{ end }}</strong>
+          </div>
+        </div>
+      </div>
+      <span class="px-2.5 py-1 bg-[#F0E4D2] text-[#6E5845] text-[11px] font-bold rounded-lg">
+        비공개 온라인 상담 질문
+      </span>
+    </div>
+
+    <!-- Question Content -->
+    <div class="text-sm sm:text-base text-[#3A2E24] leading-relaxed font-medium space-y-2.5 pt-1">
+      {{ if .Params.question }}
+        <p class="whitespace-pre-line">{{ .Params.question }}</p>
+      {{ else if .Summary }}
+        <p>{{ .Summary }}</p>
+      {{ end }}
+    </div>
+  </div>
+
+  <!-- 2. Doctor Answer Header (권형근 원장 답변 시작 안내) -->
+  <div class="flex items-center gap-4 bg-[#EAF3EF] p-4 sm:p-5 rounded-2xl border border-[#C5DED3]">
+    <div class="w-14 h-14 rounded-2xl overflow-hidden border-2 border-[#2F5D50] flex-shrink-0 shadow-sm">
+      <img src="/images/director.jpg" alt="권형근 대표원장" class="w-full h-full object-cover" />
+    </div>
+    <div class="space-y-0.5">
+      <div class="flex items-center gap-2">
+        <span class="w-6 h-6 rounded-full bg-[#2F5D50] text-white text-xs font-extrabold flex items-center justify-center">A</span>
+        <h3 class="font-extrabold text-base sm:text-lg text-[#26332E]">권형근 대표원장의 1:1 심층 상담 답변</h3>
+      </div>
+      <p class="text-xs text-[#53615B]">
+        한방침구과 전문의 • 한의학석사 • 해아림한의원 인천부평점 대표원장
+      </p>
+    </div>
+  </div>
+
+  <style>
+    .qa-answer-body {
+      font-size: 15.5px;
+      line-height: 1.95;
+      color: #26332E;
+    }
+    .qa-answer-body h2 {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: #2F5D50;
+      margin-top: 2rem;
+      margin-bottom: 0.85rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 2px solid #EAF3EF;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .qa-answer-body h3 {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: #26332E;
+      margin-top: 1.75rem;
+      margin-bottom: 0.65rem;
+    }
+    .qa-answer-body p {
+      margin-bottom: 1.25rem;
+    }
+    .qa-highlight-card {
+      background: #F2F7F4;
+      border: 1px solid #DDE6E1;
+      border-left: 4px solid #2F5D50;
+      border-radius: 0 16px 16px 0;
+      padding: 18px 22px;
+      margin: 20px 0;
+      font-size: 14px;
+      line-height: 1.8;
+      color: #33403A;
+    }
+  </style>
+
+  <!-- 3. Doctor Answer Content Body -->
+  <article class="prose prose-lg max-w-none qa-answer-body space-y-4 pt-2">
+    {{ .Content }}
+  </article>
+
+  <!-- 4. Quick Consultation & Booking Action Banner (전환 유도 CTA) -->
+  <div class="heal-card bg-[#F2F7F4] p-6 sm:p-8 rounded-2xl border-2 border-[#2F5D50] space-y-4 mt-12 shadow-sm">
+    <div class="flex flex-col sm:flex-row items-center sm:items-start gap-4">
+      <div class="w-16 h-16 rounded-2xl overflow-hidden border border-[#DDE6E1] flex-shrink-0 bg-white shadow-xs">
+        <img src="/images/director.jpg" alt="권형근 대표원장" class="w-full h-full object-cover" />
+      </div>
+      <div class="space-y-1 text-center sm:text-left flex-1">
+        <div class="inline-block px-2.5 py-0.5 rounded-full bg-[#2F5D50] text-white text-[11px] font-extrabold mb-1">
+          1:1 맞춤 진료 예약
+        </div>
+        <h3 class="text-base sm:text-lg font-extrabold text-[#26332E]">
+          "유사한 증상으로 고민 중이신가요? 편안하게 문의하세요."
+        </h3>
+        <p class="text-xs sm:text-sm text-[#53615B] leading-relaxed">
+          해아림한의원 인천부평점은 환자 한 분 한 분의 목소리에 귀 기울이며, 정밀 3대 검사 및 1:1 맞춤 치료로 근본 자생력을 되찾아 드립니다.
+        </p>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-3 border-t border-[#DDE6E1]">
+      <a href="https://pf.kakao.com/_Tcxcxoxj" target="_blank" rel="noopener" class="heal-btn heal-btn-kakao text-xs sm:text-sm py-3 px-4 font-bold flex items-center justify-center gap-2">
+        <i class="fa-solid fa-comment text-base"></i>
+        <span>카카오톡 1:1 상담</span>
+      </a>
+      <a href="https://booking.naver.com/booking/13/bizes/934695" target="_blank" rel="noopener" class="heal-btn heal-btn-naver text-xs sm:text-sm py-3 px-4 font-bold flex items-center justify-center gap-2">
+        <i class="fa-solid fa-calendar-check text-base"></i>
+        <span>네이버 간편 진료예약</span>
+      </a>
+      <a href="tel:032-719-3472" class="heal-btn heal-btn-primary text-xs sm:text-sm py-3 px-4 font-bold flex items-center justify-center gap-2">
+        <i class="fa-solid fa-phone text-base"></i>
+        <span>전화 문의 (032-719-3472)</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- 5. Related Q&A Recommendations -->
+  {{ $currentCategory := .Params.category }}
+  {{ $currentRelPermalink := .RelPermalink }}
+  {{ $relatedQAs := where (where site.RegularPages "Type" "qa") "RelPermalink" "ne" $currentRelPermalink }}
+  {{ $catMatched := where $relatedQAs "Params.category" $currentCategory }}
+  {{ $displayList := first 3 $catMatched }}
+  {{ if lt (len $displayList) 3 }}
+    {{ $fallbackList := first 3 $relatedQAs }}
+    {{ $displayList = $fallbackList }}
+  {{ end }}
+
+  {{ if gt (len $displayList) 0 }}
+  <div class="mt-12 pt-8 border-t border-[#DDE6E1] space-y-4">
+    <div class="flex items-center justify-between">
+      <h3 class="text-base sm:text-lg font-extrabold text-[#26332E] flex items-center gap-2">
+        <i class="fa-solid fa-clipboard-question text-[#2F5D50]"></i>
+        <span>함께 읽어보면 좋은 {{ with $currentCategory }}{{ . }} {{ end }}상담 사례</span>
+      </h3>
+      <a href="/qa/" class="text-xs text-[#2F5D50] font-bold hover:underline">전체 Q&A 보기 ›</a>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      {{ range $displayList }}
+      <a href="{{ .RelPermalink }}" class="heal-card p-4 rounded-xl border border-[#DDE6E1] hover:border-[#2F5D50] hover:shadow-md transition flex flex-col justify-between group bg-white">
+        <div class="space-y-2">
+          {{ if .Params.category }}
+          <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#EAF3EF] text-[#2F5D50]">
+            {{ .Params.category }}
+          </span>
+          {{ end }}
+          <h4 class="text-xs sm:text-sm font-bold text-[#26332E] group-hover:text-[#2F5D50] line-clamp-2 leading-snug">
+            {{ .Title }}
+          </h4>
+          <p class="text-[11px] text-[#68736E] line-clamp-2 leading-relaxed">
+            {{ with .Params.question }}{{ . }}{{ else }}{{ .Summary }}{{ end }}
+          </p>
+        </div>
+        <div class="mt-3 pt-2 border-t border-[#F2F7F4] flex items-center justify-between text-[10px] text-[#68736E]">
+          <span><i class="fa-regular fa-calendar mr-1"></i>{{ .Date.Format "2006.01.02" }}</span>
+          <span class="text-[#2F5D50] font-semibold group-hover:translate-x-0.5 transition-transform">답변 읽기 →</span>
+        </div>
+      </a>
+      {{ end }}
+    </div>
+  </div>
+  {{ end }}
+
+  <!-- Back to Q&A list button -->
+  <div class="text-center pt-4">
+    <a href="/qa/" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#202947] text-white text-xs sm:text-sm font-bold hover:bg-[#2F3C64] transition shadow-sm">
+      <i class="fa-solid fa-list"></i>
+      <span>Q&A 상담 사례 전체 목록 보기</span>
+    </a>
+  </div>
+
+</div>
+
+<!-- JSON-LD FAQPage Schema for Search Engines (Google & Naver Rich Snippet) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": {{ .Title | jsonify }},
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": {{ .Summary | jsonify }}
+    }
+  }]
+}
+</script>
+{{ end }}

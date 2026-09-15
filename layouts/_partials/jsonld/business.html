@@ -1,0 +1,156 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["MedicalClinic", "LocalBusiness"],
+      "@id": "{{ site.BaseURL }}#clinic",
+      "name": "해아림한의원 부평점 통합진료센터",
+      "alternateName": [
+        "해아림한의원 부평점",
+        "인천 해아림한의원",
+        "부평 해아림한의원",
+        "해아림한의원인천부평점"
+      ],
+      "url": "{{ site.BaseURL }}",
+      "email": "healimbp@gmail.com",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "{{ site.BaseURL }}#logo",
+        "url": "{{ "images/director.jpg" | absURL }}",
+        "caption": "해아림한의원 부평점 통합진료센터"
+      },
+      "image": [
+        "{{ "images/director.jpg" | absURL }}",
+        "{{ "images/clinic/bp01.jpg" | absURL }}",
+        "{{ "images/clinic/bp02.jpg" | absURL }}",
+        "{{ "images/clinic/bp03.jpg" | absURL }}",
+        "{{ "images/clinic/bp04.jpg" | absURL }}"
+      ],
+      "description": "{{ site.Params.hugoblox.identity.description }}",
+      "telephone": "032-719-3472",
+      "priceRange": "₩₩",
+      "currenciesAccepted": "KRW",
+      "paymentAccepted": "Cash, Credit Card",
+      "areaServed": "인천광역시, 부평구, 부천시, 시흥시",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "경원대로 1412, 지상 2층 (부평동 534-48)",
+        "addressLocality": "부평구",
+        "addressRegion": "인천광역시",
+        "postalCode": "21404",
+        "addressCountry": "KR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 37.493393,
+        "longitude": 126.721474
+      },
+      "hasMap": "https://map.naver.com/p/search/%ED%95%B4%EC%95%84%EB%A6%BC%ED%95%9C%EC%9D%98%EC%9B%90%20%EC%9D%B8%EC%B2%9C%EB%B6%80%ED%8F%89%EC%A0%90",
+      "openingHours": [
+        "Mo 09:30-20:00",
+        "Tu 09:30-19:00",
+        "We 09:30-20:00",
+        "Th 09:30-19:00",
+        "Fr 09:30-20:00",
+        "Sa 09:30-15:00"
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Wednesday", "Friday"],
+          "opens": "09:30",
+          "closes": "20:00",
+          "description": "월·수·금 야간진료 (점심시간 13:00~14:00)"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Tuesday", "Thursday"],
+          "opens": "09:30",
+          "closes": "19:00",
+          "description": "화·목 주간진료 (점심시간 13:00~14:00)"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Saturday"],
+          "opens": "09:30",
+          "closes": "15:00",
+          "description": "토요일 점심시간 없이 연속 진료"
+        }
+      ],
+      "medicalSpecialty": [
+        "Orthopedics",
+        "PhysicalMedicine",
+        "TraditionalChineseMedicine"
+      ],
+      "availableService": [
+        {
+          "@type": "MedicalTherapy",
+          "name": "척추·관절 통증 & 추나 클리닉",
+          "description": "목/허리 디스크, 일자목/거북목, 오십견, 회전근개파열, 무릎 퇴행성관절염, 발목 염좌, 건강보험 추나요법 및 정밀 약침"
+        },
+        {
+          "@type": "MedicalTherapy",
+          "name": "교통사고 후유증 클리닉 (자동차보험)",
+          "description": "자동차보험 100% 적용 본인부담금 0원, 편타성 손상, 어혈 한약, 침·부항·물리치료·추나 통원 집중 케어"
+        },
+        {
+          "@type": "MedicalTherapy",
+          "name": "만성 기침·비염·성대결절 호흡기 클리닉 (보폐고)",
+          "description": "만성 잔기침, 마른기침, 가래, 비염, 축농증, 후비루, 쉰목소리, 성대결절 호흡기 점막 보습 & 항염 보폐고(補肺膏)"
+        },
+        {
+          "@type": "MedicalTherapy",
+          "name": "맞춤 보약 & 공진단·경옥고",
+          "description": "식약처 인증 정품 사향공진단, 활력공진단, 72시간 원방경옥고, 수험생 총명탕, 산후보약, 기력회복 맞춤 한약"
+        }
+      ],
+      "medicalDirector": {
+        "@type": "Physician",
+        "@id": "{{ site.BaseURL }}#director",
+        "name": "권형근",
+        "jobTitle": "대표원장, 한방침구과 전문의",
+        "medicalSpecialty": "TraditionalChineseMedicine",
+        "description": "한방침구과 전문의 권형근 대표원장 1:1 책임 진료. 척추관절 통증, 추나, 교통사고 후유증, 만성 호흡기, 맞춤 보약",
+        "image": "{{ "images/director.jpg" | absURL }}",
+        "worksFor": {
+          "@id": "{{ site.BaseURL }}#clinic"
+        }
+      },
+      "parentOrganization": {
+        "@type": "MedicalOrganization",
+        "name": "해아림한의원 인천부평점 본원 (뇌신경·정신과)",
+        "url": "https://healimbp.com"
+      },
+      "sameAs": [
+        "https://healimbp.com",
+        "https://map.naver.com/p/search/%ED%95%B4%EC%95%84%EB%A6%BC%ED%95%9C%EC%9D%98%EC%9B%90%20%EC%9D%B8%EC%B2%9C%EB%B6%80%ED%8F%89%EC%A0%90",
+        "https://booking.naver.com/booking/13/bizes/934695",
+        "https://blog.naver.com/s72x6o8cv",
+        "https://pf.kakao.com/_Tcxcxoxj"
+      ]
+    },
+    {
+      "@type": "Physician",
+      "@id": "{{ site.BaseURL }}#director",
+      "name": "권형근",
+      "jobTitle": "대표원장, 한방침구과 전문의",
+      "worksFor": {
+        "@id": "{{ site.BaseURL }}#clinic"
+      },
+      "image": "{{ "images/director.jpg" | absURL }}",
+      "medicalSpecialty": [
+        "Orthopedics",
+        "PhysicalMedicine",
+        "TraditionalChineseMedicine"
+      ],
+      "description": "한방침구과 전문의 권형근 대표원장. 통증·추나, 교통사고 후유증, 호흡기 점막 보습(보폐고), 맞춤 보약 1:1 책임 진료.",
+      "sameAs": [
+        "{{ "about/" | absURL }}",
+        "https://healimbp.com",
+        "https://blog.naver.com/s72x6o8cv"
+      ]
+    }
+  ]
+}
+</script>

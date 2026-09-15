@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <svg width="1080" height="1080" viewBox="0 0 1080 1080" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#05101d" />
+        <stop offset="50%" stop-color="#0b1e36" />
+        <stop offset="100%" stop-color="#040b14" />
+      </linearGradient>
+      <filter id="blurEffect" x="-50%" y="-50%" width="200%" height="200%">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="120" />
+      </filter>
+    </defs>
+
+    
+    <!-- Background Gradient -->
+    <rect x="0" y="0" width="1080" height="1080" fill="url(#bgGrad)" />
+    <!-- Ambient Glow Effects -->
+    <circle cx="950" cy="120" r="380" fill="#0284c7" opacity="0.18" filter="url(#blurEffect)" />
+    <circle cx="100" cy="950" r="320" fill="#0284c7" opacity="0.12" filter="url(#blurEffect)" />
+
+    <!-- Top Header Bar -->
+    <g transform="translate(60, 55)">
+      <rect x="0" y="0" width="960" height="66" rx="33" fill="rgba(255, 255, 255, 0.07)" stroke="rgba(255, 255, 255, 0.14)" stroke-width="1.5" />
+      <circle cx="40" cy="33" r="18" fill="#0284c7" />
+      <text x="40" y="40" font-size="16" font-weight="900" fill="#ffffff" text-anchor="middle" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">H</text>
+      <text x="75" y="41" font-size="22" font-weight="700" fill="#ffffff" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">해아림한의원 인천부평점</text>
+      <rect x="850" y="15" width="85" height="36" rx="18" fill="rgba(255, 255, 255, 0.12)" />
+      <text x="892" y="40" font-size="17" font-weight="700" fill="#38bdf8" text-anchor="middle" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">1 / 5</text>
+    </g>
+  
+    
+      <!-- Category Badge -->
+      <g transform="translate(60, 170)">
+        <rect x="0" y="0" width="300" height="50" rx="25" fill="#0369a1" />
+        <text x="150" y="32" font-size="21" font-weight="800" fill="#ffffff" text-anchor="middle" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">
+          공황장애 / 자율신경
+        </text>
+      </g>
+
+      <!-- Main Hook Title -->
+      <g transform="translate(60, 280)">
+        <text font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">
+          <tspan x="0" y="0" font-size="54" font-weight="800" fill="#ffffff" text-anchor="start">갑자기 숨이 턱 막히고</tspan><tspan x="0" y="72" font-size="54" font-weight="800" fill="#ffffff" text-anchor="start">심장이 터질 것 같나요?</tspan>
+        </text>
+      </g>
+
+      <!-- Subtitle Card -->
+      <g transform="translate(60, 500)">
+        <rect x="0" y="0" width="960" height="110" rx="22" fill="rgba(255, 255, 255, 0.05)" stroke="rgba(255, 255, 255, 0.14)" stroke-width="1.5" />
+        <rect x="35" y="30" width="48" height="48" rx="24" fill="#0284c7" fill-opacity="0.3" />
+        <text x="59" y="60" font-size="22" font-weight="900" fill="#38bdf8" text-anchor="middle" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">TIP</text>
+        <text x="105" y="65" font-size="23" font-weight="600" fill="#e2e8f0" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">
+          단순 스트레스가 아닌 뇌신경계 과흥분 신호입니다
+        </text>
+      </g>
+
+      <!-- 3 Key Topic Pillars -->
+      <g transform="translate(60, 650)">
+        <!-- Box 1 -->
+        <g transform="translate(0, 0)">
+          <rect x="0" y="0" width="300" height="245" rx="24" fill="rgba(15, 23, 42, 0.88)" stroke="#0284c7" stroke-width="1.5" stroke-opacity="0.5" />
+          <rect x="25" y="25" width="60" height="32" rx="16" fill="#0369a1" />
+          <text x="55" y="47" font-size="15" font-weight="800" fill="#ffffff" text-anchor="middle" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">01</text>
+          <text x="100" y="49" font-size="22" font-weight="800" fill="#ffffff" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">자가진단</text>
+          <text font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">
+            <tspan x="25" y="115" font-size="20" font-weight="500" fill="#94a3b8" text-anchor="start">내 증상이 질환인지</tspan><tspan x="25" y="149" font-size="20" font-weight="500" fill="#94a3b8" text-anchor="start">30초 만에 체크하기</tspan>
+          </text>
+        </g>
+
+        <!-- Box 2 -->
+        <g transform="translate(330, 0)">
+          <rect x="0" y="0" width="300" height="245" rx="24" fill="rgba(15, 23, 42, 0.88)" stroke="#0284c7" stroke-width="1.5" stroke-opacity="0.5" />
+          <rect x="25" y="25" width="60" height="32" rx="16" fill="#0369a1" />
+          <text x="55" y="47" font-size="15" font-weight="800" fill="#ffffff" text-anchor="middle" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">02</text>
+          <text x="100" y="49" font-size="22" font-weight="800" fill="#ffffff" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">원인 분석</text>
+          <text font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">
+            <tspan x="25" y="115" font-size="20" font-weight="500" fill="#94a3b8" text-anchor="start">자율신경과 뇌신경</tspan><tspan x="25" y="149" font-size="20" font-weight="500" fill="#94a3b8" text-anchor="start">핵심 발병 기전 이해</tspan>
+          </text>
+        </g>
+
+        <!-- Box 3 -->
+        <g transform="translate(660, 0)">
+          <rect x="0" y="0" width="300" height="245" rx="24" fill="rgba(15, 23, 42, 0.88)" stroke="#0284c7" stroke-width="1.5" stroke-opacity="0.5" />
+          <rect x="25" y="25" width="60" height="32" rx="16" fill="#0369a1" />
+          <text x="55" y="47" font-size="15" font-weight="800" fill="#ffffff" text-anchor="middle" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">03</text>
+          <text x="100" y="49" font-size="22" font-weight="800" fill="#ffffff" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">맞춤 치료</text>
+          <text font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">
+            <tspan x="25" y="115" font-size="20" font-weight="500" fill="#94a3b8" text-anchor="start">내성 없는 1:1</tspan><tspan x="25" y="149" font-size="20" font-weight="500" fill="#94a3b8" text-anchor="start">한의학 솔루션 확인</tspan>
+          </text>
+        </g>
+      </g>
+    
+    
+    <!-- Bottom Footer Bar -->
+    <g transform="translate(60, 970)">
+      <line x1="0" y1="0" x2="960" y2="0" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1" />
+      <text x="0" y="38" font-size="19" font-weight="600" fill="#94a3b8" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">
+        부평대로 24 (부평역 5번 출구) ｜ 032-506-1075
+      </text>
+      <text x="960" y="38" font-size="19" font-weight="700" fill="#38bdf8" text-anchor="end" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif">
+        옆으로 넘겨보기 ▶
+      </text>
+    </g>
+  
+  </svg>

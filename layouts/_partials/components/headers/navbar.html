@@ -1,0 +1,209 @@
+{{ $branding := partialCached "functions/get_branding" . "branding" }}
+{{- $bookingUrl := "https://booking.naver.com/booking/13/bizes/934695" | safeURL -}}
+{{- $kakaoUrl := "https://pf.kakao.com/_Tcxcxoxj" | safeURL -}}
+{{- $phoneUrl := "tel:032-719-3472" | safeURL -}}
+
+<header id="site-header" class="header sticky top-0 z-50 bg-white/98 backdrop-blur-md border-b border-[#E2EAE5] shadow-sm">
+  <nav class="container mx-auto px-3 sm:px-5 lg:px-6 flex items-center justify-between h-20 sm:h-22">
+    <!-- 1. 공식 해아림 로고 (좌측) -->
+    <div class="flex items-center shrink-0">
+      <a class="navbar-brand flex items-center gap-2 sm:gap-3 py-1 group select-none transition-transform hover:opacity-95" href="{{ site.Home.RelPermalink }}" title="해아림한의원 인천부평점" style="text-decoration: none !important;">
+        <!-- 해아림 정통 엠블럼 심볼 -->
+        <div class="flex flex-col items-center justify-center shrink-0">
+          <svg class="w-9 h-9 sm:w-11 sm:h-11 text-[#188A7D]" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M30 10 C16 10 7 20 7 33 C7 45 17 53 30 53 C41 53 50 45 52 35 C53 29 49 23 42 20 C35 17 27 19 23 25 C19 31 22 38 28 41 C33 43 38 41 40 37" 
+                  stroke="#188A7D" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="30" cy="32" r="6" fill="#188A7D"/>
+          </svg>
+          <span class="text-[9px] font-black text-[#188A7D] tracking-widest leading-none mt-0.5" style="letter-spacing: 0.08em;">healim</span>
+        </div>
+
+        <!-- 브랜드 텍스트 & 인천부평점 뱃지 -->
+        <div class="flex flex-col justify-center text-left">
+          <span class="text-[11px] sm:text-[12px] font-bold text-[#556B62] tracking-normal leading-tight">
+            마음까지 헤아리는
+          </span>
+          <div class="flex items-center gap-1.5 sm:gap-2 mt-0.5">
+            <span class="text-xl sm:text-2xl lg:text-[26px] font-black text-[#1F2937] tracking-tight leading-none" style="font-family: 'Pretendard', 'Noto Sans KR', -apple-system, sans-serif;">
+              해아림한의원
+            </span>
+            <!-- 인천부평점 둥근 알약 뱃지 -->
+            <span class="inline-flex items-center justify-center px-2 py-0.5 rounded-full border border-[#188A7D]/40 bg-[#E8F5F3] text-[#188A7D] font-extrabold text-[11px] sm:text-[12px] leading-tight shadow-sm shrink-0">
+              인천부평점
+            </span>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- 2. 데스크톱 내비게이션 메뉴 (중앙 - 깔끔한 1줄 가로 배치 & 줄바꿈 방지) -->
+    <ul id="nav-menu" class="navbar-nav hidden lg:flex items-center gap-0.5 xl:gap-1.5 mx-2">
+      {{ $currentPage := . }}
+      {{ range site.Menus.main }}
+        {{ $menuURL := .URL | absLangURL }}
+        {{ $pageURL:= $currentPage.Permalink | absLangURL }}
+        {{ $active := eq $menuURL $pageURL }}
+        <li class="nav-item">
+          <a class="nav-link text-[13px] xl:text-[14px] font-bold text-[#4B5563] hover:text-[#188A7D] px-2 xl:px-3 py-1.5 rounded-lg whitespace-nowrap transition-all {{ if $active }}text-[#188A7D] font-extrabold bg-[#EAF5F3]{{ end }}"
+             href="{{ .URL | relLangURL }}">
+            {{ .Name }}
+          </a>
+        </li>
+      {{ end }}
+    </ul>
+
+    <!-- 3. 우측 액션 버튼 영역 (모바일 3대 퀵버튼 & 데스크톱 CTA) -->
+    <div class="flex items-center gap-1.5 sm:gap-2 shrink-0">
+      <!-- 모바일 전용 3대 퀵버튼: 전화, 카톡, 네이버예약 -->
+      <div class="flex items-center gap-1 sm:gap-1.5 lg:hidden">
+        <!-- 📞 전화상담 -->
+        <a href="{{ $phoneUrl }}" class="w-8 h-8 rounded-xl flex items-center justify-center text-[#5C4033] hover:bg-[#F2F4F3] active:scale-95 transition" title="전화 상담 바로연결">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+            <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+          </svg>
+        </a>
+
+        <!-- 💬 카카오톡 1:1 상담 -->
+        <a href="{{ $kakaoUrl }}" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-xl flex items-center justify-center text-[#3B1E1E] hover:bg-[#FEE500]/20 active:scale-95 transition" title="카카오톡 1:1 상담">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+            <path d="M12 3c-5.52 0-10 3.58-10 8 0 2.85 1.86 5.35 4.67 6.72-.21.78-.77 2.84-.88 3.28-.14.54.2.53.42.39.29-.19 3.88-2.64 4.54-3.1.41.06.83.09 1.25.09 5.52 0 10-3.58 10-8s-4.48-8-10-8z"/>
+          </svg>
+        </a>
+
+        <!-- 📅 네이버 예약 -->
+        <a href="{{ $bookingUrl }}" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-xl flex items-center justify-center text-[#03C75A] hover:bg-[#03C75A]/10 active:scale-95 transition" title="네이버 실시간 예약">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+            <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11zM7 11h5v5H7z"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- 모바일 햄버거 메뉴 토글 버튼 -->
+      <button id="mobile-menu-btn" type="button" onclick="toggleHealimMenu(event)" class="p-1.5 rounded-xl text-[#2F5D50] hover:bg-[#EAF3EF] active:scale-95 lg:hidden transition flex items-center justify-center focus:outline-none cursor-pointer select-none" aria-label="메뉴 열기" aria-expanded="false" style="touch-action: manipulation; -webkit-tap-highlight-color: transparent;">
+        <!-- 햄버거 아이콘 -->
+        <svg id="hamburger-icon" class="w-6 h-6 fill-none stroke-current stroke-2 pointer-events-none" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+        <!-- 닫기(X) 아이콘 -->
+        <svg id="close-icon" class="w-6 h-6 fill-none stroke-current stroke-2 pointer-events-none" style="display: none;" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+
+      <!-- 데스크톱 전용 네이버 예약 & 빠른상담 CTA -->
+      <div class="hidden lg:flex items-center gap-1.5">
+        <a href="https://healimbp.com" target="_blank" rel="noopener noreferrer" 
+           class="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-xl border border-[#ADC4BA] bg-[#F2F7F4] text-[#1F3F36] text-[11px] font-extrabold hover:bg-[#EAF3EF] transition whitespace-nowrap shadow-2xs"
+           title="해아림한의원 부평점 본원 (뇌신경·자율신경·불면·공황) 바로가기">
+          <span class="w-1.5 h-1.5 rounded-full bg-[#188A7D]"></span>
+          <span>[본원] 뇌신경·정신과</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-[9px] text-[#556B62]"></i>
+        </a>
+        <a href="{{ $bookingUrl }}" target="_blank" rel="noopener noreferrer" 
+           class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#03C75A] text-white text-xs font-extrabold hover:bg-[#02b350] shadow-sm transition whitespace-nowrap" style="color: #ffffff !important;">
+          <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M19.5 3h-15C3.1 3 2 4.1 2 5.5v13C2 19.9 3.1 21 4.5 21h15c1.4 0 2.5-1.1 2.5-2.5v-13C22 4.1 20.9 3 19.5 3zm-9.3 12.9H7.4V8.1h2.8v7.8zm6.6 0h-2.8l-3.3-4.9v4.9H8.2V8.1h2.8l3.3 4.9V8.1h2.5v7.8z"/></svg>
+          <span>네이버 예약</span>
+        </a>
+        <a href="tel:032-719-3472" 
+           class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#2F5D50] text-white text-xs font-extrabold hover:bg-[#1F3F36] shadow-sm transition whitespace-nowrap" style="color: #ffffff !important;">
+          <i class="fa-solid fa-phone text-[10px]"></i>
+          <span>전화 상담</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 모바일 펼침 메뉴 드롭다운 -->
+  <div id="mobile-menu-drawer" class="lg:hidden border-t border-[#E2EAE5] bg-white px-4 py-4 space-y-1 shadow-xl max-h-[calc(100vh-5rem)] overflow-y-auto" style="display: none; -webkit-overflow-scrolling: touch;">
+    <!-- 본원(뇌신경·정신과) 바로가기 배너 -->
+    <a href="https://healimbp.com" target="_blank" rel="noopener noreferrer"
+       class="flex items-center justify-between p-3 mb-2 rounded-xl bg-[#F2F7F4] border border-[#ADC4BA] text-[#1F3F36] transition hover:bg-[#EAF3EF]"
+       title="해아림한의원 부평점 본원 바로가기">
+      <div class="flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-[#188A7D]"></span>
+        <div class="text-left">
+          <div class="text-xs font-black text-[#1F3F36]">[본원] 뇌신경·정신과 바로가기</div>
+          <div class="text-[10px] text-[#556B62]">공황장애·불면증·자율신경·틱·ADHD</div>
+        </div>
+      </div>
+      <i class="fa-solid fa-arrow-right text-xs text-[#188A7D]"></i>
+    </a>
+
+    {{ $currentPage := . }}
+    {{ range site.Menus.main }}
+      {{ $menuURL := .URL | absLangURL }}
+      {{ $pageURL:= $currentPage.Permalink | absLangURL }}
+      {{ $active := eq $menuURL $pageURL }}
+      <a class="flex items-center justify-between px-3.5 py-2 rounded-xl font-bold text-sm text-[#202947] hover:bg-[#EAF3EF] hover:text-[#188A7D] transition {{ if $active }}bg-[#EAF3EF] text-[#188A7D] font-extrabold{{ end }}"
+         href="{{ .URL | relLangURL }}" onclick="closeHealimMenu()">
+        <span>{{ .Name }}</span>
+        <svg class="w-4 h-4 text-[#8EAB9F]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </a>
+    {{ end }}
+    <div class="pt-3 border-t border-[#E2EAE5] flex gap-2">
+      <a href="{{ $bookingUrl }}" target="_blank" rel="noopener noreferrer" class="flex-1 py-2.5 text-center rounded-xl bg-[#03C75A] text-white text-xs font-extrabold shadow-sm active:opacity-90" style="color: #ffffff !important;">
+        네이버 예약
+      </a>
+      <a href="tel:032-719-3472" class="flex-1 py-2.5 text-center rounded-xl bg-[#2F5D50] text-white text-xs font-extrabold shadow-sm active:opacity-90" style="color: #ffffff !important;">
+        전화 상담 032-719-3472
+      </a>
+    </div>
+  </div>
+</header>
+
+<script>
+  function toggleHealimMenu(e) {
+    if (e) {
+      if (e.stopPropagation) e.stopPropagation();
+    }
+    var drawer = document.getElementById('mobile-menu-drawer');
+    var btn = document.getElementById('mobile-menu-btn');
+    var hIcon = document.getElementById('hamburger-icon');
+    var cIcon = document.getElementById('close-icon');
+
+    if (!drawer) return;
+
+    var isHidden = (drawer.style.display === 'none' || drawer.style.display === '' || getComputedStyle(drawer).display === 'none');
+
+    if (isHidden) {
+      drawer.style.setProperty('display', 'block', 'important');
+      if (btn) btn.setAttribute('aria-expanded', 'true');
+      if (hIcon) hIcon.style.display = 'none';
+      if (cIcon) cIcon.style.display = 'block';
+    } else {
+      drawer.style.setProperty('display', 'none', 'important');
+      if (btn) btn.setAttribute('aria-expanded', 'false');
+      if (hIcon) hIcon.style.display = 'block';
+      if (cIcon) cIcon.style.display = 'none';
+    }
+  }
+
+  function closeHealimMenu() {
+    var drawer = document.getElementById('mobile-menu-drawer');
+    var btn = document.getElementById('mobile-menu-btn');
+    var hIcon = document.getElementById('hamburger-icon');
+    var cIcon = document.getElementById('close-icon');
+
+    if (drawer) drawer.style.setProperty('display', 'none', 'important');
+    if (btn) btn.setAttribute('aria-expanded', 'false');
+    if (hIcon) hIcon.style.display = 'block';
+    if (cIcon) cIcon.style.display = 'none';
+  }
+
+  document.addEventListener('click', function(e) {
+    var header = document.getElementById('site-header');
+    if (header && !header.contains(e.target)) {
+      closeHealimMenu();
+    }
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeHealimMenu();
+  });
+
+  window.addEventListener('resize', function() {
+    if (window.innerWidth >= 1024) closeHealimMenu();
+  });
+</script>

@@ -1,0 +1,52 @@
+{{- $page := .page -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "@id": "{{ $page.Permalink }}#breadcrumb",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "홈",
+      "item": "{{ site.BaseURL }}"
+    }
+    {{- if not $page.IsHome -}}
+      {{- if eq $page.Type "column" -}}
+    ,{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "건강 칼럼",
+      "item": "{{ "column/" | absURL }}"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": {{ $page.Title }},
+      "item": "{{ $page.Permalink }}"
+    }
+      {{- else if eq $page.Type "posts" -}}
+    ,{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "포스트",
+      "item": "{{ "posts/" | absURL }}"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": {{ $page.Title }},
+      "item": "{{ $page.Permalink }}"
+    }
+      {{- else -}}
+    ,{
+      "@type": "ListItem",
+      "position": 2,
+      "name": {{ $page.Title }},
+      "item": "{{ $page.Permalink }}"
+    }
+      {{- end -}}
+    {{- end -}}
+  ]
+}
+</script>

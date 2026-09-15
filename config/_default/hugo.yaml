@@ -1,0 +1,50 @@
+# Configuration of Hugo for Healim Clinic (통합진료센터)
+title: '해아림한의원 부평점 통합진료센터 | 통증·추나·교통사고·호흡기(보폐고)·보약'
+baseURL: 'https://healim-bp.com/'
+
+defaultContentLanguage: ko
+locale: ko-KR
+hasCJKLanguage: true
+defaultContentLanguageInSubdir: false
+removePathAccents: true
+
+outputs:
+  home: [HTML, RSS]
+  section: [HTML, RSS]
+
+build:
+  writeStats: true
+buildFuture: false
+buildDrafts: false
+buildExpired: false
+enableGitInfo: false
+summaryLength: 30
+pagination:
+  pagerSize: 10
+enableEmoji: true
+enableRobotsTXT: true
+footnotereturnlinkcontents: <sup>^</sup>
+disableAliases: true
+imaging:
+  resampleFilter: lanczos
+  quality: 90
+  anchor: smart
+  hint: picture
+timeout: 600000
+taxonomies:
+  tag: tags
+  category: categories
+markup:
+  _merge: deep
+  goldmark:
+    renderer:
+      unsafe: true
+security:
+  _merge: deep
+sitemap:
+  _merge: deep
+
+minify:
+  tdewolff:
+    html:
+      keepQuotes: true

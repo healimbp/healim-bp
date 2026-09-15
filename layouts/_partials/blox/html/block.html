@@ -1,0 +1,17 @@
+{{/* Hugo Blox Custom HTML Block */}}
+{{ $page := .wcPage }}
+{{ $block := .wcBlock }}
+{{ $content := $block.content }}
+{{ if not (reflect.IsMap $content) }}{{ $content = dict }}{{ end }}
+
+{{ with index $content "html" }}
+  <div class="w-full">
+    {{ . | safeHTML }}
+  </div>
+{{ else }}
+  {{ with index $content "text" }}
+    <div class="w-full">
+      {{ . | safeHTML }}
+    </div>
+  {{ end }}
+{{ end }}

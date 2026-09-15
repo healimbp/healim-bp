@@ -1,0 +1,26 @@
+# Main Navigation Menus for Healim Clinic (통합진료센터)
+main:
+  - name: 척추·통증·추나
+    url: /pain/
+    weight: 10
+  - name: 교통사고
+    url: /traffic-accident/
+    weight: 20
+  - name: 호흡기·보폐고
+    url: /respiratory/
+    weight: 30
+  - name: 부종·순환 [부종환]
+    url: /edema/
+    weight: 40
+  - name: 맞춤보약·공진단
+    url: /tonic/
+    weight: 50
+  - name: 원장소개
+    url: /about/
+    weight: 60
+  - name: 건강칼럼
+    url: /column/
+    weight: 70
+  - name: 진료시간 & 오시는길
+    url: /location/
+    weight: 80

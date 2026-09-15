@@ -1,0 +1,221 @@
+{{ define "main" }}
+<div class="w-full max-w-4xl mx-auto py-8 px-4 sm:px-6 space-y-8">
+
+  <!-- Breadcrumb & Back Link -->
+  <div class="flex items-center justify-between text-xs text-[#68736E] border-b border-[#DDE6E1] pb-3">
+    <div class="flex items-center gap-2">
+      <a href="/" class="hover:text-[#2F5D50]">홈</a>
+      <span>›</span>
+      <a href="/column/" class="hover:text-[#2F5D50]">건강 칼럼</a>
+      {{ if .Params.category }}
+      <span>›</span>
+      <span class="text-[#2F5D50] font-bold">{{ .Params.category }}</span>
+      {{ end }}
+    </div>
+    <a href="/column/" class="inline-flex items-center gap-1 font-bold text-[#2F5D50] hover:underline">
+      <i class="fa-solid fa-arrow-left text-[10px]"></i>
+      <span>칼럼 목록으로</span>
+    </a>
+  </div>
+
+  <!-- Article Header -->
+  <header class="space-y-4">
+    {{ if .Params.category }}
+    <span class="heal-tag bg-[#EAF3EF] text-[#2F5D50] font-bold text-xs">
+      {{ .Params.category }}
+    </span>
+    {{ end }}
+    
+    <h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#26332E] leading-tight">
+      {{ .Title }}
+    </h1>
+
+    <!-- Author & Meta Info -->
+    <div class="flex items-center justify-between flex-wrap gap-3 pt-3 border-t border-[#F2F7F4] text-xs text-[#68736E]">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full overflow-hidden border border-[#DDE6E1] bg-[#F2F7F4] flex-shrink-0">
+          <img src="/images/director.jpg" alt="권형근 대표원장" class="w-full h-full object-cover" />
+        </div>
+        <div>
+          <div class="font-extrabold text-[#26332E] text-sm">권형근 대표원장</div>
+          <div class="text-[11px] text-[#2F5D50] font-semibold">해아림한의원 인천부평점 • 한방침구과 전문의</div>
+        </div>
+      </div>
+      <div class="flex items-center gap-3 text-xs text-[#68736E]">
+        <span><i class="fa-regular fa-calendar mr-1"></i>{{ .Date.Format "2006년 01월 02일" }}</span>
+        <span>•</span>
+        <span><i class="fa-regular fa-clock mr-1"></i>3분 읽기</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Summary Callout Box -->
+  {{ if .Summary }}
+  <div class="bg-[#F2F7F4] border-l-4 border-l-[#2F5D50] p-5 rounded-r-2xl text-xs sm:text-sm text-[#3D4D47] leading-relaxed">
+    <strong class="text-[#2F5D50] block mb-1">💡 칼럼 핵심 요약</strong>
+    {{ .Summary }}
+  </div>
+  {{ end }}
+
+  <style>
+    .voice-box {
+      background: #F7F5F0;
+      border-left: 4px solid #C87941;
+      border-radius: 0 16px 16px 0;
+      padding: 20px 24px;
+      margin: 24px 0;
+    }
+    .voice-line {
+      font-size: 14.5px;
+      color: #3A2E24;
+      line-height: 1.8;
+      padding-left: 20px;
+      position: relative;
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+    .voice-line:last-child { margin-bottom: 0; }
+    .voice-line::before {
+      content: '"';
+      position: absolute;
+      left: 0;
+      font-size: 22px;
+      color: #C87941;
+      line-height: 1;
+      top: -2px;
+      font-weight: bold;
+    }
+    .intro-body {
+      font-size: 15px;
+      line-height: 1.95;
+      color: #33403A;
+      margin-bottom: 28px;
+    }
+    .intro-body p + p {
+      margin-top: 12px;
+    }
+    .toc {
+      background: #F9FAF8;
+      border: 1px solid #DDE6E1;
+      border-radius: 16px;
+      padding: 22px 26px;
+      margin-bottom: 36px;
+    }
+    .toc-title {
+      font-size: 14px;
+      font-weight: 800;
+      color: #2F5D50;
+      letter-spacing: 0.04em;
+      margin-bottom: 12px;
+    }
+    .toc ol {
+      padding-left: 20px;
+      color: #4E6159;
+      font-size: 13.5px;
+      line-height: 2.0;
+      font-weight: 600;
+      margin: 0;
+    }
+    .section-label {
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      color: #2F5D50;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+  </style>
+
+  <!-- Main Article Content Body -->
+  <article class="prose prose-lg max-w-none text-[#26332E] leading-relaxed space-y-6 pt-2">
+    {{ .Content }}
+  </article>
+
+  <!-- Related Medical Columns (네이버 연관 문서 & 서브링크 클러스터링 유도) -->
+  {{ $currentCategory := .Params.category }}
+  {{ $currentRelPermalink := .RelPermalink }}
+  {{ $relatedColumns := where (where site.RegularPages "Type" "column") "RelPermalink" "ne" $currentRelPermalink }}
+  {{ $catMatched := where $relatedColumns "Params.category" $currentCategory }}
+  {{ $displayList := first 3 $catMatched }}
+  {{ if lt (len $displayList) 3 }}
+    {{ $fallbackList := first 3 $relatedColumns }}
+    {{ $displayList = $fallbackList }}
+  {{ end }}
+
+  {{ if gt (len $displayList) 0 }}
+  <div class="mt-12 pt-8 border-t border-[#DDE6E1] space-y-4">
+    <div class="flex items-center justify-between">
+      <h3 class="text-base sm:text-lg font-extrabold text-[#26332E] flex items-center gap-2">
+        <i class="fa-solid fa-notes-medical text-[#2F5D50]"></i>
+        <span>함께 읽어보면 좋은 {{ with $currentCategory }}{{ . }} {{ end }}추천 의학 칼럼</span>
+      </h3>
+      <a href="/column/" class="text-xs text-[#2F5D50] font-bold hover:underline">전체보기 ›</a>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      {{ range $displayList }}
+      <a href="{{ .RelPermalink }}" class="heal-card p-4 rounded-xl border border-[#DDE6E1] hover:border-[#2F5D50] hover:shadow-md transition flex flex-col justify-between group bg-white">
+        <div class="space-y-2">
+          {{ if .Params.category }}
+          <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#EAF3EF] text-[#2F5D50]">
+            {{ .Params.category }}
+          </span>
+          {{ end }}
+          <h4 class="text-xs sm:text-sm font-bold text-[#26332E] group-hover:text-[#2F5D50] line-clamp-2 leading-snug">
+            {{ .Title }}
+          </h4>
+          <p class="text-[11px] text-[#68736E] line-clamp-2 leading-relaxed">
+            {{ .Summary }}
+          </p>
+        </div>
+        <div class="mt-3 pt-2 border-t border-[#F2F7F4] flex items-center justify-between text-[10px] text-[#68736E]">
+          <span><i class="fa-regular fa-calendar mr-1"></i>{{ .Date.Format "2006.01.02" }}</span>
+          <span class="text-[#2F5D50] font-semibold group-hover:translate-x-0.5 transition-transform">읽어보기 →</span>
+        </div>
+      </a>
+      {{ end }}
+    </div>
+  </div>
+  {{ end }}
+
+  <!-- Doctor Consultation Bottom Banner -->
+  <div class="heal-card bg-[#F2F7F4] p-6 sm:p-8 rounded-2xl border border-[#DDE6E1] space-y-4 mt-12">
+    <div class="flex flex-col sm:flex-row items-center sm:items-start gap-4">
+      <div class="w-16 h-16 rounded-2xl overflow-hidden border border-[#DDE6E1] flex-shrink-0">
+        <img src="/images/director.jpg" alt="권형근 대표원장" class="w-full h-full object-cover" />
+      </div>
+      <div class="space-y-1 text-center sm:text-left flex-1">
+        <h3 class="text-base sm:text-lg font-extrabold text-[#26332E]">
+          "통증과 낫지 않는 만성 질환, 혼자 참지 마세요."
+        </h3>
+        <p class="text-xs sm:text-sm text-[#53615B] leading-relaxed">
+          해아림한의원 인천부평점은 척추·관절 추나요법, 교통사고 후유증 케어, 만성 기침(보폐고), 1:1 맞춤 보약으로 부평 이웃분들의 건강한 일상을 지켜드립니다.
+        </p>
+      </div>
+    </div>
+
+    <div class="flex flex-wrap justify-center sm:justify-end gap-3 pt-2">
+      <a href="tel:032-719-3472" class="heal-btn heal-btn-primary text-xs sm:text-sm py-2.5 px-4">
+        <i class="fa-solid fa-phone"></i>
+        <span>전화 상담: 032-719-3472</span>
+      </a>
+      <a href="https://pf.kakao.com/_Tcxcxoxj" target="_blank" rel="noopener" class="heal-btn heal-btn-kakao text-xs sm:text-sm py-2.5 px-4">
+        <i class="fa-solid fa-comment"></i>
+        <span>카카오톡 1:1 상담</span>
+      </a>
+      <a href="https://booking.naver.com/booking/13/bizes/934695" target="_blank" rel="noopener" class="heal-btn heal-btn-naver text-xs sm:text-sm py-2.5 px-4">
+        <i class="fa-solid fa-calendar-check"></i>
+        <span>네이버 예약</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Back to list button -->
+  <div class="text-center pt-4">
+    <a href="/column/" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#202947] text-white text-xs sm:text-sm font-bold hover:bg-[#2F3C64] transition shadow-sm">
+      <i class="fa-solid fa-list"></i>
+      <span>다른 건강 칼럼 목록 보기</span>
+    </a>
+  </div>
+
+</div>
+{{ end }}
