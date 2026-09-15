@@ -2,12 +2,17 @@ const fs = require('fs');
 const path = require('path');
 
 const slug = process.argv[2];
-const customDate = process.argv[3]; // e.g. '2026-09-20' for scheduled publishing
+const customDate = process.argv[3]; // e.g. '2026-09-20'
+const customSlot = process.argv[4] || '1'; // 1 (09:00), 2 (13:00), 3 (17:00), 4 (21:00)
 
 if (!slug) {
-  console.log('\n❌ 사용법: npm run new:column <칼럼영문슬러그> [발행예정일 YYYY-MM-DD]');
-  console.log('예시 1 (오늘 즉시 발행): npm run new:column frozen-shoulder');
-  console.log('예시 2 (예약 자동 발행): npm run new:column frozen-shoulder 2026-09-25\n');
+  console.log('\n❌ 사용법: npm run new:column <칼럼영문슬러그> [발행예정일 YYYY-MM-DD] [시간대 1~4]');
+  console.log('  - 시간대 1: 09:00 (아침)');
+  console.log('  - 시간대 2: 13:00 (점심)');
+  console.log('  - 시간대 3: 17:00 (오후)');
+  console.log('  - 시간대 4: 21:00 (저녁)');
+  console.log('\n예시 1 (오늘 즉시 발행): npm run new:column frozen-shoulder');
+  console.log('예시 2 (내일 점심 13시 예약): npm run new:column frozen-shoulder 2026-09-16 2\n');
   process.exit(1);
 }
 
@@ -19,11 +24,20 @@ if (fs.existsSync(targetFile)) {
   process.exit(1);
 }
 
-const publishDate = customDate || new Date().toISOString().slice(0, 10);
+const slotTimes = {
+  '1': '09:00:00',
+  '2': '13:00:00',
+  '3': '17:00:00',
+  '4': '21:00:00'
+};
+
+const selectedTime = slotTimes[customSlot] || '09:00:00';
+const baseDate = customDate || new Date().toISOString().slice(0, 10);
+const publishDatetime = `${baseDate}T${selectedTime}+09:00`;
 
 const template = `---
 title: "새 칼럼 제목을 입력하세요"
-date: ${publishDate}
+date: ${publishDatetime}
 summary: "칼럼의 핵심 요약 2~3줄을 작성해 주세요. 네이버 및 구글 검색 결과 설명란에 노출됩니다."
 category: "척추·관절 통증"
 tags: ["부평한의원", "추나요법", "도수치료", "약침"]
@@ -77,9 +91,5 @@ fs.writeFileSync(targetFile, template, 'utf8');
 
 console.log(`\n✅ 칼럼 파일 생성 완료!`);
 console.log(`📄 파일 경로: content/column/${slug}/index.md`);
-console.log(`📅 발행(예약)일: ${publishDate}`);
-if (customDate && new Date(customDate) > new Date()) {
-  console.log(`⏰ [예약 발행 모드] ${customDate} 오전 9시에 GitHub Actions를 통해 자동 발행됩니다.\n`);
-} else {
-  console.log(`🚀 [즉시 발행 모드] Git 푸시 시 즉시 사이트에 배포됩니다.\n`);
-}
+console.log(`📅 예약 일시: ${publishDatetime} (${customSlot}회차 - ${selectedTime})`);
+console.log(`⏰ GitHub Actions를 통해 해당 일시에 자동으로 사이트에 발행됩니다.\n`);

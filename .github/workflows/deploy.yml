@@ -4,8 +4,10 @@ on:
   push:
     branches: ["main", "master"]
   schedule:
-    - cron: '0 0 * * *'   # 00:00 UTC = 09:00 KST (매일 아침 자동 발행)
-    - cron: '0 12 * * *'  # 12:00 UTC = 21:00 KST (매일 저녁 자동 발행)
+    - cron: '0 0 * * *'   # 00:00 UTC = 09:00 KST (1회차: 아침 정기 발행)
+    - cron: '0 4 * * *'   # 04:00 UTC = 13:00 KST (2회차: 점심 정기 발행)
+    - cron: '0 8 * * *'   # 08:00 UTC = 17:00 KST (3회차: 오후 정기 발행)
+    - cron: '0 12 * * *'  # 12:00 UTC = 21:00 KST (4회차: 저녁 정기 발행)
   workflow_dispatch:
 
 permissions:
