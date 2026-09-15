@@ -17,6 +17,7 @@
         <span class="heal-tag">#척추관절추나</span>
         <span class="heal-tag">#교통사고후유증</span>
         <span class="heal-tag">#만성기침보폐고</span>
+        <span class="heal-tag">#만성부종부종환</span>
         <span class="heal-tag">#정품사향공진단</span>
       </div>
     </div>
@@ -24,19 +25,22 @@
 
   <!-- Category Filter Bar (Client-side fast tab filter) -->
   <div class="flex items-center gap-2 overflow-x-auto pb-2 border-b border-[#DDE6E1] text-xs sm:text-sm font-bold" id="columnFilterBar">
-    <button type="button" class="filter-btn active px-4 py-2 rounded-full transition bg-[#2F5D50] text-white" data-filter="all">
+    <button type="button" class="filter-btn active px-4 py-2 rounded-full transition bg-[#2F5D50] text-white shrink-0" data-filter="all">
       전체 칼럼 ({{ len .Pages }})
     </button>
-    <button type="button" class="filter-btn px-4 py-2 rounded-full transition bg-white text-slate-700 border border-[#DDE6E1] hover:border-[#2F5D50]" data-filter="척추·관절 통증">
+    <button type="button" class="filter-btn px-4 py-2 rounded-full transition bg-white text-slate-700 border border-[#DDE6E1] hover:border-[#2F5D50] shrink-0" data-filter="척추·관절">
       척추·관절·추나
     </button>
-    <button type="button" class="filter-btn px-4 py-2 rounded-full transition bg-white text-slate-700 border border-[#DDE6E1] hover:border-[#2F5D50]" data-filter="교통사고 후유증">
+    <button type="button" class="filter-btn px-4 py-2 rounded-full transition bg-white text-slate-700 border border-[#DDE6E1] hover:border-[#2F5D50] shrink-0" data-filter="교통사고">
       교통사고 클리닉
     </button>
-    <button type="button" class="filter-btn px-4 py-2 rounded-full transition bg-white text-slate-700 border border-[#DDE6E1] hover:border-[#2F5D50]" data-filter="만성 기침·호흡기">
+    <button type="button" class="filter-btn px-4 py-2 rounded-full transition bg-white text-slate-700 border border-[#DDE6E1] hover:border-[#2F5D50] shrink-0" data-filter="호흡기">
       만성기침·호흡기(보폐고)
     </button>
-    <button type="button" class="filter-btn px-4 py-2 rounded-full transition bg-white text-slate-700 border border-[#DDE6E1] hover:border-[#2F5D50]" data-filter="맞춤 보약·공진단">
+    <button type="button" class="filter-btn px-4 py-2 rounded-full transition bg-white text-slate-700 border border-[#DDE6E1] hover:border-[#2F5D50] shrink-0" data-filter="부종">
+      만성부종·순환(부종환)
+    </button>
+    <button type="button" class="filter-btn px-4 py-2 rounded-full transition bg-white text-slate-700 border border-[#DDE6E1] hover:border-[#2F5D50] shrink-0" data-filter="보약">
       맞춤보약·공진단
     </button>
   </div>
