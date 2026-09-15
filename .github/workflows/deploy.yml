@@ -55,6 +55,12 @@ jobs:
       - name: Install Node dependencies
         run: npm install
 
+      - name: Auto Publish Slot & Broadcast to Telegram
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN || '8583202554:AAGzom19rWFN1UwN6MzYj7ctDvS2hiua8WU' }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID || '2026055528' }}
+        run: node scripts/auto-publish-slot.js
+
       - name: Build with Hugo
         env:
           HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache

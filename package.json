@@ -7,7 +7,11 @@
     "dev": "hugo server --disableFastRender",
     "build": "hugo --minify",
     "new:column": "node scripts/new-column.js",
-    "send:telegram": "node scripts/send-to-telegram.js"
+    "publish:slot": "node scripts/auto-publish-slot.js",
+    "publish:all": "node scripts/auto-publish-slot.js --all",
+    "send:telegram": "node scripts/send-to-telegram.js",
+    "thumbnails:build": "node scripts/build-all-exact-thumbnails.js",
+    "validate": "node scripts/validate_all_articles.js"
   },
   "dependencies": {
     "@resvg/resvg-js": "^2.6.2",
