@@ -1,10 +1,8 @@
-name: Deploy Hugo Site & Scheduled Column Auto-Publish
+name: Deploy Hugo site to Pages
 
 on:
   push:
-    branches:
-      - main
-      - master
+    branches: ["main", "master"]
   schedule:
     - cron: '0 0 * * *'   # 00:00 UTC = 09:00 KST (매일 아침 자동 발행)
     - cron: '0 12 * * *'  # 12:00 UTC = 21:00 KST (매일 저녁 자동 발행)
@@ -26,33 +24,48 @@ defaults:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      HUGO_VERSION: 0.134.3
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
+      - name: Install Hugo CLI
+        run: |
+          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
+          && sudo dpkg -i ${{ runner.temp }}/hugo.deb
+
+      - name: Install Dart Sass
+        run: sudo snap install dart-sass
 
       - name: Setup Go
         uses: actions/setup-go@v5
         with:
-          go-version: '>=1.21'
-
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v3
-        with:
-          hugo-version: 'latest'
-          extended: true
+          go-version: '1.22'
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
 
-      - name: Install npm dependencies
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
+      - name: Install Node dependencies
         run: npm install
 
-      - name: Build Hugo site
-        run: hugo --minify
+      - name: Build with Hugo
+        env:
+          HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
+          HUGO_ENVIRONMENT: production
+        run: |
+          hugo \
+            --gc \
+            --minify \
+            --baseURL "https://healim-bp.com/"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
