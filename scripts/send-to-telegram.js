@@ -14,9 +14,9 @@ if (fs.existsSync(envPath)) {
   });
 }
 
-const BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN || process.argv[2];
-const CHAT_ID = process.env.TELEGRAM_CHAT_ID || process.argv[3];
-const TARGET_SLUG = process.argv[4] || 'all';
+const BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN || '8583202554:AAGzom19rWFN1UwN6MzYj7ctDvS2hiua8WU';
+const CHAT_ID = process.env.TELEGRAM_CHAT_ID || '2026055528';
+const TARGET_SLUG = process.argv[2] && !process.argv[2].startsWith('-') ? process.argv[2] : 'all';
 
 function sendTelegramMessage(text, parseMode = 'HTML') {
   return new Promise((resolve, reject) => {
@@ -234,58 +234,72 @@ function convertMarkdownToTistoryHTML(mdContent, slug) {
   const sections = bodyStr.split(/\n(?=###\s+)/);
   let parsedSectionsHTML = '';
 
-  sections.forEach(sec => {
+  const sectionIcons = ['🌿', '🔍', '📚', '🩺', '💡', '❓', '📌'];
+
+  sections.forEach((sec, sIdx) => {
     sec = sec.trim();
     if (!sec) return;
 
     if (sec.startsWith('###')) {
       const firstLineEnd = sec.indexOf('\n');
-      const heading = (firstLineEnd !== -1 ? sec.substring(3, firstLineEnd) : sec.substring(3)).trim();
+      let heading = (firstLineEnd !== -1 ? sec.substring(3, firstLineEnd) : sec.substring(3)).trim();
       let content = firstLineEnd !== -1 ? sec.substring(firstLineEnd).trim() : '';
 
       content = content.replace(/^---\s*$/gm, '').trim();
+
+      // Heading decorative icon
+      let icon = sectionIcons[sIdx % sectionIcons.length];
+      if (heading.includes('FAQ') || heading.includes('자주 묻는') || heading.includes('질문')) {
+        icon = '❓';
+      }
+
+      // Check if this is the FAQ section
+      if (heading.includes('FAQ') || heading.includes('자주 묻는') || heading.includes('질문')) {
+        const faqHTML = formatFAQSection(content);
+        parsedSectionsHTML += `\n  <h3 style="font-size: 19px; font-weight: 800; color: #1E4638; border-bottom: 2px solid #E2EAE5; padding-bottom: 10px; margin: 38px 0 18px 0; letter-spacing: -0.02em; font-style: normal;">${icon} ${heading}</h3>\n${faqHTML}\n`;
+        return;
+      }
+
+      // Format tables
       content = convertMarkdownTableToHTML(content);
 
-      // Lists
-      content = content.replace(/^(?:-|\*)\s+(.*)$/gm, (m, text) => {
-        return `<li style="position: relative; padding-left: 20px; margin-bottom: 8px; font-size: 15.5px; line-height: 1.8; color: #374151; font-style: normal;">
-          <span style="position: absolute; left: 4px; top: 10px; width: 5px; height: 5px; background-color: #2F5D50; border-radius: 50%; display: inline-block;"></span>
-          ${text}
-        </li>`;
-      });
-      content = content.replace(/((?:<li[\s\S]*?<\/li>\s*)+)/g, '<ul style="list-style-type: none; padding-left: 0; margin: 16px 0; font-style: normal;">\n$1\n</ul>');
+      // Format clean list blocks (NO <ol> tag to prevent duplicate numbering!)
+      content = formatCleanLists(content);
 
-      content = content.replace(/^(\d+)\.\s+(.*)$/gm, (m, num, text) => {
-        return `<li style="margin-bottom: 8px; font-size: 15.5px; line-height: 1.8; color: #374151; font-style: normal;">
-          <strong style="color: #1E4638;">${num}.</strong> ${text}
-        </li>`;
-      });
-      content = content.replace(/((?:<li style="margin-bottom: 8px[\s\S]*?<\/li>\s*)+)/g, '<ol style="padding-left: 20px; margin: 16px 0; font-style: normal;">\n$1\n</ol>');
-
-      // Bold
+      // Bold replacements
       content = content.replace(/\*\*(.*?)\*\*/g, '<strong style="color: #1E4638; font-weight: 700;">$1</strong>');
       content = content.replace(/\[(.*?)\]/g, '<strong style="color: #1E4638; font-weight: 700;">$1</strong>');
 
+      // Paragraph formatting
       const paragraphs = content.split(/\n\n+/);
       const formattedP = paragraphs.map(p => {
         p = p.trim();
         if (!p) return '';
-        if (p.startsWith('<ul') || p.startsWith('<ol') || p.startsWith('<table') || p.startsWith('<div')) {
+        if (p.startsWith('<ul') || p.startsWith('<table') || p.startsWith('<div')) {
           return p;
         }
         return `<p style="font-size: 16px; line-height: 1.85; color: #374151; margin-bottom: 18px; word-break: keep-all; font-style: normal;">${p.replace(/\n/g, '<br>')}</p>`;
       }).join('\n  ');
 
-      parsedSectionsHTML += `\n  <h3 style="font-size: 19px; font-weight: 800; color: #1E4638; border-bottom: 2px solid #E2EAE5; padding-bottom: 10px; margin: 38px 0 18px 0; letter-spacing: -0.02em; font-style: normal;">🌿 ${heading}</h3>\n  ${formattedP}\n`;
+      parsedSectionsHTML += `\n  <h3 style="font-size: 19px; font-weight: 800; color: #1E4638; border-bottom: 2px solid #E2EAE5; padding-bottom: 10px; margin: 38px 0 18px 0; letter-spacing: -0.02em; font-style: normal;">${icon} ${heading}</h3>\n  ${formattedP}\n`;
     }
   });
 
-  // Assemble the exact Tistory HTML matching healimbp.tistory.com/47 WITH MAIN THUMBNAIL IMAGE
+  // Get base64 thumbnail for 100% offline & copy-paste instant preview
+  const thumbsDir = path.join(__dirname, '..', 'static', 'thumbnails');
+  const thumbPngPath = path.join(thumbsDir, `${slug}.png`);
+  let thumbSrc = `https://healim-bp.com/thumbnails/${slug}.png`;
+  if (fs.existsSync(thumbPngPath)) {
+    const b64 = fs.readFileSync(thumbPngPath).toString('base64');
+    thumbSrc = `data:image/png;base64,${b64}`;
+  }
+
+  // Assemble the exact Tistory HTML matching healimbp.tistory.com/46 standard
   const tistoryFullHTML = `<div style="font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif; line-height: 1.85; color: #333333; max-width: 780px; margin: 0 auto; padding: 10px 0; font-style: normal;">
   
   <!-- 대표 썸네일 이미지 (다음/카카오/네이버 검색 썸네일 자동 연동) -->
   <div style="text-align: center; margin: 0 0 24px 0; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
-    <img src="https://healim-bp.com/thumbnails/${slug}.png" alt="${title} - 해아림한의원 부평점 통합진료센터" style="width: 100%; max-width: 780px; height: auto; display: block; border-radius: 12px; margin: 0 auto; object-fit: cover;" />
+    <img src="${thumbSrc}" alt="${title} - 해아림한의원 부평점 통합진료센터" style="width: 100%; max-width: 780px; height: auto; display: block; border-radius: 12px; margin: 0 auto; object-fit: cover;" />
   </div>
 
   <!-- 상단 안내 헤더 박스 -->
@@ -309,7 +323,7 @@ function convertMarkdownToTistoryHTML(mdContent, slug) {
   
   ${introHTML}
 
-  ${tocListHTML ? `<h3 style="font-size: 19px; font-weight: 800; color: #1E4638; border-bottom: 2px solid #E2EAE5; padding-bottom: 10px; margin: 38px 0 18px 0; letter-spacing: -0.02em; font-style: normal;">📌 이 칼럼에서 다루는 핵심 목차</h3>
+  ${tocListHTML ? `<h3 style="font-size: 19px; font-weight: 800; color: #1E4638; border-bottom: 2px solid #E2EAE5; padding-bottom: 10px; margin: 38px 0 18px 0; letter-spacing: -0.02em; font-style: normal;">📌 이 칼럼에서 다루는 6대 핵심 목차</h3>
   <ul style="list-style-type: none; padding-left: 0; margin: 18px 0; font-style: normal;">
 ${tocListHTML}
   </ul>` : ''}
@@ -371,6 +385,81 @@ ${tocListHTML}
   };
 }
 
+// Convert FAQ text into beautiful Card UI boxes matching healimbp.tistory.com/46
+function formatFAQSection(content) {
+  const qnaBlocks = [];
+  const lines = content.split('\n');
+  let currentQ = '';
+  let currentA = [];
+
+  lines.forEach(line => {
+    line = line.trim();
+    if (!line) return;
+
+    const qMatch = line.match(/^\*?\*?(?:Q\d*\.?\s*|질문\s*\d*\.?\s*)?(.*?)\*?\*?$/i);
+    if (line.includes('**Q') || line.startsWith('Q1.') || line.startsWith('Q2.') || line.startsWith('Q3.') || line.startsWith('**Q1') || line.startsWith('**Q2') || line.startsWith('**Q3')) {
+      if (currentQ) {
+        qnaBlocks.push({ q: currentQ, a: currentA.join(' ') });
+      }
+      currentQ = line.replace(/^\*?\*?Q\d*\.?\s*/i, '').replace(/\*?\*?$/g, '').trim();
+      currentA = [];
+    } else {
+      if (currentQ) {
+        currentA.push(line);
+      }
+    }
+  });
+
+  if (currentQ) {
+    qnaBlocks.push({ q: currentQ, a: currentA.join(' ') });
+  }
+
+  if (qnaBlocks.length === 0) {
+    // Fallback if regex didn't catch
+    return `<div style="font-size: 16px; line-height: 1.85; color: #374151;">${content.replace(/\n/g, '<br>')}</div>`;
+  }
+
+  let html = '<div style="margin: 24px 0;">\n';
+  qnaBlocks.forEach((item, idx) => {
+    const qNum = `Q${idx + 1}`;
+    html += `  <div style="background-color: #F9FAF8; border: 1px solid #E2EAE5; border-radius: 12px; padding: 18px 22px; margin-bottom: 14px; box-shadow: 0 1px 3px rgba(0,0,0,0.02); font-style: normal;">
+    <div style="font-size: 15.5px; font-weight: 800; color: #1E4638; display: flex; align-items: flex-start; gap: 8px; margin-bottom: 8px; font-style: normal;">
+      <span style="background-color: #2F5D50; color: #ffffff; font-size: 12px; font-weight: bold; padding: 3px 8px; border-radius: 6px; display: inline-block; flex-shrink: 0; margin-right: 6px;">${qNum}</span>
+      <span>${item.q}</span>
+    </div>
+    <p style="font-size: 14.5px; line-height: 1.85; color: #4E6159; margin: 0; padding-left: 36px; word-break: keep-all; font-style: normal;">
+      ${item.a}
+    </p>
+  </div>\n`;
+  });
+  html += '</div>';
+  return html;
+}
+
+// Convert markdown list items to bulletproof styled <ul> to prevent duplicate numbers
+function formatCleanLists(content) {
+  // Replace numbered lists like `1. **Title**: desc` or `1. Title: desc`
+  content = content.replace(/^(\d+)\.\s+(.*)$/gm, (match, num, text) => {
+    return `<li style="position: relative; padding-left: 22px; margin-bottom: 10px; font-size: 15.5px; line-height: 1.8; color: #374151; font-style: normal;">
+      <span style="position: absolute; left: 6px; top: 10px; width: 6px; height: 6px; background-color: #2F5D50; border-radius: 50%; display: inline-block;"></span>
+      ${text}
+    </li>`;
+  });
+
+  // Replace unordered lists like `- **Title**: desc`
+  content = content.replace(/^(?:-|\*)\s+(.*)$/gm, (match, text) => {
+    return `<li style="position: relative; padding-left: 22px; margin-bottom: 10px; font-size: 15.5px; line-height: 1.8; color: #374151; font-style: normal;">
+      <span style="position: absolute; left: 6px; top: 10px; width: 6px; height: 6px; background-color: #2F5D50; border-radius: 50%; display: inline-block;"></span>
+      ${text}
+    </li>`;
+  });
+
+  // Wrap consecutive <li> into <ul style="list-style-type: none; padding-left: 0;">
+  content = content.replace(/((?:<li[\s\S]*?<\/li>\s*)+)/g, '<ul style="list-style-type: none; padding-left: 0; margin: 18px 0; font-style: normal;">\n$1\n</ul>');
+
+  return content;
+}
+
 function convertMarkdownTableToHTML(text) {
   const tableRegex = /\|(.+)\|\r?\n\|[-:\s|]+\|\r?\n((?:\|.+\|\r?\n?)+)/g;
   return text.replace(tableRegex, (match, headerLine, rowsBlock) => {
@@ -419,7 +508,7 @@ async function run() {
     }
   }
 
-  console.log(`🚀 총 ${targetDirs.length}개 칼럼을 대표 썸네일 이미지(사진) + 티스토리 HTML 서식으로 텔레그램에 전송합니다... (Chat ID: ${CHAT_ID})\n`);
+  console.log(`🚀 총 ${targetDirs.length}개 칼럼을 healimbp.tistory.com/46 표준 HTML 서식 + Base64 썸네일 탑재로 텔레그램에 전송합니다... (Chat ID: ${CHAT_ID})\n`);
 
   for (let i = 0; i < targetDirs.length; i++) {
     const slug = targetDirs[i];
@@ -449,7 +538,7 @@ async function run() {
       // 2. Send as HTML document attachment
       const fileName = `${slug}.html`;
       await sendTelegramDocument(fileName, html, `📄 ${title} (티스토리 HTML 서식 복사용)`);
-      console.log(`   ✅ 대표 썸네일 사진 + HTML 파일 전송 완료!`);
+      console.log(`   ✅ 완벽한 카드 썸네일 사진 + 티스토리 46번 서식 HTML 파일 전송 완료!`);
 
       await sleep(1500);
     } catch (err) {
@@ -457,7 +546,7 @@ async function run() {
     }
   }
 
-  console.log(`\n🎉 모든 칼럼이 대표 썸네일 이미지와 함께 완벽히 전송되었습니다!`);
+  console.log(`\n🎉 모든 칼럼이 완벽한 카드 썸네일 및 티스토리 46번 서식으로 전송되었습니다!`);
 }
 
 function sleep(ms) {
