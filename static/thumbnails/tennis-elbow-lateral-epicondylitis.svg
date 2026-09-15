@@ -1,82 +1,107 @@
-<svg width="1200" height="675" viewBox="0 0 1200 675" xmlns="http://www.w3.org/2000/svg">
+<svg width="900" height="1020" viewBox="0 0 900 1020" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#091b15" />
-      <stop offset="50%" stop-color="#122f25" />
-      <stop offset="100%" stop-color="#071510" />
-    </linearGradient>
-    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="rgba(255,255,255,0.08)" />
-      <stop offset="100%" stop-color="rgba(255,255,255,0.02)" />
-    </linearGradient>
-    <filter id="glow1" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="90" result="blur" />
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.25" />
     </filter>
   </defs>
 
-  <!-- Background -->
-  <rect width="1200" height="675" fill="url(#bgGrad)" />
+  <!-- Outer Dark Navy Card Canvas -->
+  <rect x="0" y="0" width="900" height="1020" rx="36" fill="#0d1b2a" />
 
-  <!-- Ambient Glow -->
-  <circle cx="1050" cy="120" r="300" fill="#38bdf8" opacity="0.15" filter="url(#glow1)" />
-  <circle cx="150" cy="550" r="280" fill="#2F5D50" opacity="0.25" filter="url(#glow1)" />
-
-  <!-- Outer Glass Frame -->
-  <rect x="40" y="40" width="1120" height="595" rx="24" fill="url(#cardGrad)" stroke="rgba(255,255,255,0.12)" stroke-width="1.5" />
-
-  <!-- Header Section -->
-  <g transform="translate(80, 80)">
-    <!-- Clinic Logo Badge -->
-    <rect x="0" y="0" width="46" height="46" rx="14" fill="#2F5D50" />
-    <text x="23" y="31" font-size="22" font-weight="900" fill="#ffffff" text-anchor="middle" font-family="'Pretendard', 'Malgun Gothic', sans-serif">해</text>
-
-    <!-- Clinic Name -->
-    <text x="60" y="32" font-size="22" font-weight="800" fill="#ffffff" font-family="'Pretendard', 'Malgun Gothic', sans-serif">
-      해아림한의원 부평점 <tspan fill="#a7f3d0" font-weight="600" font-size="18">통합진료센터</tspan>
+  <!-- Top Floating Pill (Dark Green + Golden Accent) -->
+  <g transform="translate(450, 68)">
+    <!-- Pill Base Background -->
+    <rect x="-240" y="-24" width="480" height="48" rx="24" fill="#1e3932" />
+    <!-- Left Golden Icon Accent Area -->
+    <rect x="-236" y="-20" width="200" height="40" rx="20" fill="#c59b27" />
+    <!-- Text -->
+    <text x="-136" y="6" font-size="16" font-weight="800" fill="#ffffff" text-anchor="middle" font-family="'Pretendard', 'Malgun Gothic', sans-serif">
+      🌿 척추·관절
     </text>
-
-    <!-- Category Badge -->
-    <rect x="800" y="2" width="240" height="42" rx="21" fill="#2F5D50" />
-    <text x="920" y="28" font-size="16" font-weight="800" fill="#ffffff" text-anchor="middle" font-family="'Pretendard', 'Malgun Gothic', sans-serif">
-      척추·관절 통증
+    <text x="75" y="6" font-size="16" font-weight="700" fill="#e2f0ea" text-anchor="middle" font-family="'Pretendard', 'Malgun Gothic', sans-serif">
+      &amp; 추나 클리닉
     </text>
   </g>
 
-  <!-- Decorative Divider -->
-  <line x1="80" y1="155" x2="1120" y2="155" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
+  <!-- Inner Pure White Card with Drop Shadow -->
+  <g filter="url(#cardShadow)">
+    <rect x="50" y="115" width="800" height="850" rx="32" fill="#ffffff" />
+  </g>
 
-  <!-- Main Headline -->
-  <g transform="translate(80, 235)">
-    <text font-family="'Pretendard', 'Malgun Gothic', 'Noto Sans KR', sans-serif">
-      <tspan x="0" y="0" font-size="44" font-weight="900" fill="#ffffff">물건 들거나 문고리 돌릴 때 찌릿한 팔꿈치 통증</tspan>
-      <tspan x="0" y="65" font-size="38" font-weight="800" fill="#e2e8f0">테니스엘보(외측상과염) 소염약침과 인대 재생 치료</tspan>
+  <!-- Content inside White Card -->
+  <!-- 1. Sub-Hook Pill (Light Cream Background + Warm Gold Text) -->
+  <g transform="translate(90, 155)">
+    <rect x="0" y="0" width="600" height="34" rx="8" fill="#fdf6ec" />
+    <text x="14" y="23" font-size="15" font-weight="800" fill="#b88a3b" font-family="'Pretendard', 'Malgun Gothic', sans-serif">
+      물건 들거나 비틀 때 찌릿한 팔꿈치 통증의 악순환
     </text>
   </g>
 
-  <!-- Subtitle Feature Card -->
-  <g transform="translate(80, 395)">
-    <rect x="0" y="0" width="1040" height="90" rx="18" fill="rgba(15, 23, 42, 0.6)" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
-    
-    <!-- Specialist Tag -->
-    <rect x="25" y="24" width="170" height="42" rx="10" fill="#2F5D50" />
-    <text x="110" y="50" font-size="16" font-weight="800" fill="#ffffff" text-anchor="middle" font-family="'Pretendard', 'Malgun Gothic', sans-serif">
-      한방침구과 전문의
-    </text>
-
-    <text x="215" y="52" font-size="20" font-weight="700" fill="#f8fafc" font-family="'Pretendard', 'Malgun Gothic', sans-serif">
-      권형근 대표원장 1:1 직접 책임 진료 ｜ 비수술 한방 솔루션
+  <!-- 2. Main Title (Crisp, High-Impact Typography) -->
+  <g transform="translate(90, 235)">
+    <text font-size="34" font-weight="900" fill="#0f172a" font-family="'Pretendard', 'Malgun Gothic', sans-serif">
+      테니스엘보 · 외측상과염 한방 치료
     </text>
   </g>
 
-  <!-- Footer Information Bar -->
-  <g transform="translate(80, 560)">
-    <circle cx="10" cy="10" r="5" fill="#34d399" />
-    <text x="25" y="16" font-size="16" font-weight="600" fill="#94a3b8" font-family="'Pretendard', 'Malgun Gothic', sans-serif">
-      인천 부평구 경원대로 1404 그랑프리빌딩 7층 (부평역 7번 출구 도보 1분)
+  <!-- 3. Doctor & Clinic Strip (Light Cool Grey Background) -->
+  <g transform="translate(90, 268)">
+    <rect x="0" y="0" width="720" height="48" rx="12" fill="#f1f5f9" />
+    <text x="20" y="30" font-size="15" font-weight="700" fill="#475569" font-family="'Pretendard', 'Malgun Gothic', sans-serif">
+      해아림한의원 부평점 · <tspan fill="#1e3932" font-weight="800">권형근 대표원장 (한방침구과 전문의 1:1 직접 진료)</tspan>
     </text>
+  </g>
 
-    <text x="1040" y="16" font-size="17" font-weight="800" fill="#fbbf24" text-anchor="end" font-family="'Pretendard', 'Malgun Gothic', sans-serif">
-      ☎ 032-719-3472
+  <!-- 4. Step 01 Card -->
+  <g transform="translate(90, 340)">
+    <rect x="0" y="0" width="720" height="120" rx="18" fill="#fcfbf9" stroke="#eef2f5" stroke-width="1.5" />
+    <!-- Gold Number Badge -->
+    <rect x="18" y="18" width="62" height="84" rx="14" fill="#c59b27" />
+    <text x="49" y="68" font-size="24" font-weight="900" fill="#ffffff" text-anchor="middle" font-family="'Pretendard', 'Malgun Gothic', sans-serif">01</text>
+    <!-- Card Text -->
+    <text x="102" y="50" font-size="20" font-weight="800" fill="#0f172a" font-family="'Pretendard', 'Malgun Gothic', sans-serif">
+      ECRB 힘줄 건증(Tendinosis) 정밀 진단
+    </text>
+    <text x="102" y="82" font-size="14.5" font-weight="500" fill="#64748b" font-family="'Pretendard', 'Malgun Gothic', sans-serif">
+      미세 파열과 저혈관 부위의 산소 결핍 분석
+    </text>
+  </g>
+
+  <!-- 5. Step 02 Card -->
+  <g transform="translate(90, 480)">
+    <rect x="0" y="0" width="720" height="120" rx="18" fill="#fcfbf9" stroke="#eef2f5" stroke-width="1.5" />
+    <!-- Gold Number Badge -->
+    <rect x="18" y="18" width="62" height="84" rx="14" fill="#c59b27" />
+    <text x="49" y="68" font-size="24" font-weight="900" fill="#ffffff" text-anchor="middle" font-family="'Pretendard', 'Malgun Gothic', sans-serif">02</text>
+    <!-- Card Text -->
+    <text x="102" y="50" font-size="20" font-weight="800" fill="#0f172a" font-family="'Pretendard', 'Malgun Gothic', sans-serif">
+      소염약침 &amp; 미세 침도 유착 박리
+    </text>
+    <text x="102" y="82" font-size="14.5" font-weight="500" fill="#64748b" font-family="'Pretendard', 'Malgun Gothic', sans-serif">
+      스테로이드 없이 염증 배출 및 혈류 공급
+    </text>
+  </g>
+
+  <!-- 6. Step 03 Card -->
+  <g transform="translate(90, 620)">
+    <rect x="0" y="0" width="720" height="120" rx="18" fill="#fcfbf9" stroke="#eef2f5" stroke-width="1.5" />
+    <!-- Gold Number Badge -->
+    <rect x="18" y="18" width="62" height="84" rx="14" fill="#c59b27" />
+    <text x="49" y="68" font-size="24" font-weight="900" fill="#ffffff" text-anchor="middle" font-family="'Pretendard', 'Malgun Gothic', sans-serif">03</text>
+    <!-- Card Text -->
+    <text x="102" y="50" font-size="20" font-weight="800" fill="#0f172a" font-family="'Pretendard', 'Malgun Gothic', sans-serif">
+      주관절 감압 추나 &amp; 인대 강화 한약
+    </text>
+    <text x="102" y="82" font-size="14.5" font-weight="500" fill="#64748b" font-family="'Pretendard', 'Malgun Gothic', sans-serif">
+      콜라겐 합성 촉진 및 팔꿈치 운동사슬 정상화
+    </text>
+  </g>
+
+  <!-- 7. Bottom Dark Green Footer Bar -->
+  <g transform="translate(90, 765)">
+    <rect x="0" y="0" width="720" height="52" rx="14" fill="#1e3932" />
+    <text x="360" y="32" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle" font-family="'Pretendard', 'Malgun Gothic', sans-serif">
+      📍 인천 부평역 7번 출구 | 야간진료 (월·수·금 20시) | 📞 032-719-3472
     </text>
   </g>
 </svg>

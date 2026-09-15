@@ -1,4 +1,22 @@
-<svg width="900" height="1020" viewBox="0 0 900 1020" xmlns="http://www.w3.org/2000/svg">
+function escapeXML(str) {
+  if (!str) return '';
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&apos;');
+}
+
+function generateCleanCardSVG({
+  category = '척추·관절 통증 & 추나 클리닉',
+  subHook = '손상된 힘줄과 관절낭, 통증의 악순환 차단',
+  title = '테니스엘보 · 외측상과염 한방 치료',
+  step1 = { title: '힘줄 건증(Tendinosis) 정밀 진단', desc: 'ECRB 미세 파열과 혈관 분포 저하 원인 분석' },
+  step2 = { title: '염증 소염 & 근막 유착 박리', desc: '초음파 유도 소염약침 및 미세 침도 요법' },
+  step3 = { title: '1:1 맞춤 인대 강화 한약', desc: '콜라겐 합성 촉진 및 팔꿈치 관절 추나 교정' }
+}) {
+  const svg = `<svg width="900" height="1020" viewBox="0 0 900 1020" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
       <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.25" />
@@ -16,10 +34,10 @@
     <rect x="-236" y="-20" width="200" height="40" rx="20" fill="#c59b27" />
     <!-- Text -->
     <text x="-136" y="6" font-size="16" font-weight="800" fill="#ffffff" text-anchor="middle" font-family="'Pretendard', 'Malgun Gothic', sans-serif">
-      🌿 맞춤보약
+      🌿 ${escapeXML(category.split('&')[0].trim())}
     </text>
     <text x="75" y="6" font-size="16" font-weight="700" fill="#e2f0ea" text-anchor="middle" font-family="'Pretendard', 'Malgun Gothic', sans-serif">
-      &amp; 공진단 클리닉
+      ${escapeXML(category.includes('&') ? '& ' + category.split('&')[1].trim() : '통합진료 클리닉')}
     </text>
   </g>
 
@@ -33,14 +51,14 @@
   <g transform="translate(90, 155)">
     <rect x="0" y="0" width="600" height="34" rx="8" fill="#fdf6ec" />
     <text x="14" y="23" font-size="15" font-weight="800" fill="#b88a3b" font-family="'Pretendard', 'Malgun Gothic', sans-serif">
-      머리가 멍하고 집중력이 떨어지는 수험생 뇌 피로
+      ${escapeXML(subHook)}
     </text>
   </g>
 
   <!-- 2. Main Title (Crisp, High-Impact Typography) -->
   <g transform="translate(90, 235)">
     <text font-size="34" font-weight="900" fill="#0f172a" font-family="'Pretendard', 'Malgun Gothic', sans-serif">
-      수험생 총명탕 · 장원환 한방 처방
+      ${escapeXML(title)}
     </text>
   </g>
 
@@ -60,10 +78,10 @@
     <text x="49" y="68" font-size="24" font-weight="900" fill="#ffffff" text-anchor="middle" font-family="'Pretendard', 'Malgun Gothic', sans-serif">01</text>
     <!-- Card Text -->
     <text x="102" y="50" font-size="20" font-weight="800" fill="#0f172a" font-family="'Pretendard', 'Malgun Gothic', sans-serif">
-      브레인포그 &amp; 전두엽 집중력 저하 정밀 진단
+      ${escapeXML(step1.title)}
     </text>
     <text x="102" y="82" font-size="14.5" font-weight="500" fill="#64748b" font-family="'Pretendard', 'Malgun Gothic', sans-serif">
-      시험 불안과 수면 부족으로 인한 뇌 과열 체크
+      ${escapeXML(step1.desc)}
     </text>
   </g>
 
@@ -75,10 +93,10 @@
     <text x="49" y="68" font-size="24" font-weight="900" fill="#ffffff" text-anchor="middle" font-family="'Pretendard', 'Malgun Gothic', sans-serif">02</text>
     <!-- Card Text -->
     <text x="102" y="50" font-size="20" font-weight="800" fill="#0f172a" font-family="'Pretendard', 'Malgun Gothic', sans-serif">
-      원지·석창포·복신 뇌 혈류 활성화 처방
+      ${escapeXML(step2.title)}
     </text>
     <text x="102" y="82" font-size="14.5" font-weight="500" fill="#64748b" font-family="'Pretendard', 'Malgun Gothic', sans-serif">
-      신경전달물질 분비 촉진 및 기억력 강화
+      ${escapeXML(step2.desc)}
     </text>
   </g>
 
@@ -90,10 +108,10 @@
     <text x="49" y="68" font-size="24" font-weight="900" fill="#ffffff" text-anchor="middle" font-family="'Pretendard', 'Malgun Gothic', sans-serif">03</text>
     <!-- Card Text -->
     <text x="102" y="50" font-size="20" font-weight="800" fill="#0f172a" font-family="'Pretendard', 'Malgun Gothic', sans-serif">
-      체력 증진 &amp; 자율신경 안정 맞춤 한약
+      ${escapeXML(step3.title)}
     </text>
     <text x="102" y="82" font-size="14.5" font-weight="500" fill="#64748b" font-family="'Pretendard', 'Malgun Gothic', sans-serif">
-      D-Day까지 지치지 않는 최상의 멘탈 컨디션
+      ${escapeXML(step3.desc)}
     </text>
   </g>
 
@@ -104,4 +122,9 @@
       📍 인천 부평역 7번 출구 | 야간진료 (월·수·금 20시) | 📞 032-719-3472
     </text>
   </g>
-</svg>
+</svg>`;
+
+  return svg;
+}
+
+module.exports = { generateCleanCardSVG };
