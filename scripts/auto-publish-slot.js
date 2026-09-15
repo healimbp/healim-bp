@@ -26,8 +26,31 @@ const forceFlag = args.includes('--force');
 const allFlag = args.includes('--all');
 const slugArgIdx = args.indexOf('--slug');
 const targetSlug = slugArgIdx !== -1 ? args[slugArgIdx + 1] : (args[0] && !args[0].startsWith('-') ? args[0] : null);
-const slotArgIdx = args.indexOf('--slot');
-const targetSlot = slotArgIdx !== -1 ? args[slotArgIdx + 1] : null;
+
+// History file to prevent duplicate telegram sends
+const historyFile = path.join(__dirname, '..', 'data', 'publish-history.json');
+function getHistory() {
+  if (fs.existsSync(historyFile)) {
+    try {
+      return JSON.parse(fs.readFileSync(historyFile, 'utf8'));
+    } catch (e) {
+      return { sentSlugs: [] };
+    }
+  }
+  return { sentSlugs: [] };
+}
+
+function recordSent(slug) {
+  const dataDir = path.join(__dirname, '..', 'data');
+  if (!fs.existsSync(dataDir)) {
+    fs.mkdirSync(dataDir, { recursive: true });
+  }
+  const hist = getHistory();
+  if (!hist.sentSlugs.includes(slug)) {
+    hist.sentSlugs.push(slug);
+    fs.writeFileSync(historyFile, JSON.stringify(hist, null, 2), 'utf8');
+  }
+}
 
 function sendTelegramMessage(text, parseMode = 'HTML') {
   return new Promise((resolve, reject) => {
@@ -222,6 +245,7 @@ async function publishColumn(targetCol) {
   const fileName = `${slug}.html`;
   await sendTelegramDocument(fileName, html, `📄 ${title} (티스토리 46번 서식 복사용)`);
 
+  recordSent(slug);
   console.log(`✅ [발행 및 텔레그램 전송 완료] "${title}"`);
 }
 
@@ -236,8 +260,10 @@ async function autoPublishCurrentSlot() {
   const dirs = fs.readdirSync(baseDir).filter(d => !d.startsWith('_') && fs.statSync(path.join(baseDir, d)).isDirectory());
   const now = new Date();
   const kstNow = new Date(now.getTime() + (9 * 60 * 60 * 1000));
+  const kstDateStr = kstNow.toISOString().slice(0, 10);
+  const kstHour = kstNow.getUTCHours(); // KST hour
 
-  console.log(`⏰ [정기 자동발행 시스템 구동] 현재 KST 일시: ${kstNow.toISOString().replace('Z', '+09:00')}`);
+  console.log(`⏰ [정기 자동발행 시스템 가동] 현재 KST 일시: ${kstDateStr} ${String(kstHour).padStart(2, '0')}:${String(kstNow.getUTCMinutes()).padStart(2, '0')}`);
 
   // Gather all columns
   const allColumns = [];
@@ -259,8 +285,7 @@ async function autoPublishCurrentSlot() {
     });
   });
 
-  // Sort by date descending
-  allColumns.sort((a, b) => b.postDate - a.postDate);
+  allColumns.sort((a, b) => a.postDate - b.postDate);
 
   if (allFlag) {
     console.log(`📦 [전체 발행 모드] 총 ${allColumns.length}개 칼럼을 순차 발송합니다...`);
@@ -282,17 +307,37 @@ async function autoPublishCurrentSlot() {
     return;
   }
 
-  // Filter published columns (due up to now)
-  const publishedColumns = allColumns.filter(c => c.postDate <= now || c.postDate <= kstNow);
+  const history = getHistory();
 
-  if (publishedColumns.length === 0) {
-    console.log('ℹ️ 현재 발행 시점이 도래한 칼럼이 없습니다.');
-    return;
+  // Find column scheduled for the current slot window today
+  // Slots: 09:00 (hour 8-10), 13:00 (hour 12-14), 17:00 (hour 16-18), 21:00 (hour 20-22)
+  const slotCandidates = allColumns.filter(c => {
+    const colDateStr = c.dateStr.slice(0, 10);
+    const colHour = parseInt(c.dateStr.slice(11, 13), 10);
+
+    // Check if scheduled for today
+    if (colDateStr === kstDateStr) {
+      // Check if matches the current hour slot window (+/- 1.5h)
+      if (Math.abs(colHour - kstHour) <= 1) {
+        return true;
+      }
+    }
+    return false;
+  });
+
+  if (slotCandidates.length > 0) {
+    for (const candidate of slotCandidates) {
+      if (!history.sentSlugs.includes(candidate.slug) || forceFlag) {
+        console.log(`🎯 [현재 슬롯 매칭 칼럼 발견] "${candidate.slug}" (예약: ${candidate.dateStr})`);
+        await publishColumn(candidate);
+        return;
+      } else {
+        console.log(`⏩ [이미 발송 완료된 칼럼 건너뜀] "${candidate.slug}"`);
+      }
+    }
   }
 
-  // Target the latest due column
-  const targetCol = publishedColumns[0];
-  await publishColumn(targetCol);
+  console.log(`ℹ️ 현재 KST 시간대(${kstHour}시)에 새로 발송할 예약 칼럼이 없습니다.`);
 }
 
 autoPublishCurrentSlot().catch(err => {
