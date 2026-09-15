@@ -1,48 +1,41 @@
 name: Deploy Hugo Site & Scheduled Column Auto-Publish
 
 on:
-  # 1. 코드 변경(칼럼 추가/수정 등) 푸시 시 즉시 배포
   push:
     branches:
       - main
       - master
-
-  # 2. 정기 스케줄 실행 (매일 한국시간 오전 9시 & 오후 9시 자동 빌드 -> 예약된 날짜의 칼럼 자동 발행)
   schedule:
     - cron: '0 0 * * *'   # 00:00 UTC = 09:00 KST (매일 아침 자동 발행)
     - cron: '0 12 * * *'  # 12:00 UTC = 21:00 KST (매일 저녁 자동 발행)
-
-  # 3. 깃허브 웹(Actions 탭)에서 'Run workflow' 버튼으로 수동 즉시 배포
   workflow_dispatch:
 
-# GitHub Pages 배포를 위한 권한 설정
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# 동시 배포 방지
 concurrency:
   group: "pages"
   cancel-in-progress: false
 
-# 기본 쉘 설정
 defaults:
   run:
     shell: bash
 
 jobs:
-  # 빌드 잡
   build:
     runs-on: ubuntu-latest
-    env:
-      HUGO_VERSION: "0.145.0"
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          submodules: recursive
           fetch-depth: 0
+
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '>=1.21'
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
@@ -54,20 +47,18 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
 
-      - name: Install dependencies
-        run: npm ci || npm install
+      - name: Install npm dependencies
+        run: npm install
 
-      - name: Build with Hugo
-        run: hugo --minify --gc
+      - name: Build Hugo site
+        run: hugo --minify
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
 
-  # 배포 잡
   deploy:
     environment:
       name: github-pages
