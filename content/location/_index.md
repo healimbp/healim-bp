@@ -1,6 +1,6 @@
 ---
 title: "진료시간 & 오시는 길 | 해아림한의원 부평점"
-description: "부평역 7번 출구(북광장) 도보 1분 (경원대로 1404 그랑프리빌딩 7층). 월·수·금 야간진료 저녁 8시까지. 기계식 및 제휴 주차장 완비."
+description: "부평역 7번 출구(북광장) 도보 5분 (경원대로 1412, 2층). 월·수·금 야간진료 저녁 8시까지. 기계식 및 제휴 주차장 완비."
 date: 2026-09-15
 type: landing
 
@@ -17,18 +17,18 @@ sections:
         <div class="heal-hero-card mb-12">
           <div class="max-w-3xl">
             <span class="heal-hero-badge mb-3">
-              <i class="fa-solid fa-location-dot mr-1"></i> 부평역 7번 출구 도보 1분 · 월/수/금 야간진료
+              <i class="fa-solid fa-location-dot mr-1"></i> 부평역 7번 출구 도보 5분 · 월/수/금 야간진료
             </span>
             <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 text-slate-900">
               진료시간 & 오시는 길
             </h1>
             <p class="text-slate-700 text-base sm:text-lg leading-relaxed mb-6">
-              바쁜 직장인분들도 퇴근 후 여유롭게 진료받으실 수 있도록 <strong>월·수·금 저녁 8시까지 야간진료</strong>를 시행합니다. 부평역 7번 출구 도보 1분 거리에 위치하여 대중교통과 자가용 모두 편리하게 내원하실 수 있습니다.
+              바쁜 직장인분들도 퇴근 후 여유롭게 진료받으실 수 있도록 <strong>월·수·금 저녁 8시까지 야간진료</strong>를 시행합니다. 부평역 7번 출구 도보 5분 거리에 위치하여 대중교통과 자가용 모두 편리하게 내원하실 수 있습니다.
             </p>
             <div class="flex flex-wrap gap-2">
               <span class="heal-tag">#월수금저녁8시야간진료</span>
               <span class="heal-tag">#토요일점심시간없이진료</span>
-              <span class="heal-tag">#부평역7번출구도보1분</span>
+              <span class="heal-tag">#부평역7번출구도보5분</span>
               <span class="heal-tag">#기계식및제휴주차장</span>
             </div>
           </div>
@@ -97,7 +97,7 @@ sections:
               <div class="rounded-2xl overflow-hidden border border-[#DDE6E1] shadow-sm">
                 <img src="/images/clinic/bp01.jpg" alt="해아림한의원 부평점 건물 외관" class="w-full h-64 object-cover">
                 <div class="p-3 bg-[#FAF8F3] text-center text-xs font-semibold text-slate-600">
-                  부평역 북광장 7번 출구 그랑프리빌딩 7층 해아림한의원
+                  부평역 북광장 스타벅스 방면 2층 해아림한의원
                 </div>
               </div>
             </div>
@@ -105,13 +105,13 @@ sections:
             <div class="md:col-span-7 space-y-4 text-sm text-slate-700">
               <div class="p-4 rounded-xl bg-[#FAF8F3] border border-[#DDE6E1]">
                 <span class="font-bold text-[#2F5D50] text-xs block mb-0.5">📍 도로명 주소</span>
-                <p class="text-slate-900 font-bold text-base">인천광역시 부평구 경원대로 1404 그랑프리빌딩 7층</p>
+                <p class="text-slate-900 font-bold text-base">인천광역시 부평구 경원대로 1412, 2층 (부평동 534-48)</p>
               </div>
 
               <div class="p-4 rounded-xl bg-[#FAF8F3] border border-[#DDE6E1]">
-                <span class="font-bold text-[#2F5D50] text-xs block mb-0.5">🚇 지하철 이용 시 (도보 1분)</span>
+                <span class="font-bold text-[#2F5D50] text-xs block mb-0.5">🚇 지하철 이용 시 (도보 5분)</span>
                 <p class="text-slate-600 leading-relaxed text-xs sm:text-sm">
-                  <strong>1호선 · 인천 1호선 부평역</strong> 지상 1층 <strong>7번 출구(북광장)</strong>로 나오셔서 도보 1분 (그랑프리빌딩 7층).
+                  <strong>1호선 · 인천 1호선 부평역</strong> 지상 1층 <strong>7번 출구(북광장)</strong>로 나오셔서 스타벅스 방면으로 직진 약 350m (도보 5분 소요, 2층).
                 </p>
               </div>
 

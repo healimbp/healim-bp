@@ -141,7 +141,7 @@ function generateSVG({ title, category, tags, slug }) {
   <g transform="translate(80, 560)">
     <circle cx="10" cy="10" r="5" fill="#34d399" />
     <text x="25" y="16" font-size="16" font-weight="600" fill="#94a3b8" font-family="'Pretendard', 'Malgun Gothic', sans-serif">
-      인천 부평구 경원대로 1404 그랑프리빌딩 7층 (부평역 7번 출구 도보 1분)
+      인천 부평구 경원대로 1412, 2층 (부평역 7번 출구 도보 5분)
     </text>
 
     <text x="1040" y="16" font-size="17" font-weight="800" fill="#fbbf24" text-anchor="end" font-family="'Pretendard', 'Malgun Gothic', sans-serif">

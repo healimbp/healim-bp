@@ -479,10 +479,10 @@ sections:
               </h3>
               <div class="p-4 rounded-xl bg-[#FAF8F3] border border-[#DDE6E1] mb-3">
                 <span class="text-xs font-bold text-slate-500 block mb-0.5">도로명 주소</span>
-                <p class="text-sm font-bold text-slate-900">인천광역시 부평구 경원대로 1404 그랑프리빌딩 7층</p>
+                <p class="text-sm font-bold text-slate-900">인천광역시 부평구 경원대로 1412, 2층 (부평동 534-48)</p>
               </div>
               <p class="text-xs text-slate-600 leading-relaxed mb-3">
-                • <strong>지하철</strong>: 1호선·인천1호선 <strong>부평역 7번 출구(북광장)</strong> 도보 1분 (100m)<br>
+                • <strong>지하철</strong>: 1호선·인천1호선 <strong>부평역 7번 출구(북광장)</strong> 도보 5분 (스타벅스 방면 350m)<br>
                 • <strong>주차 안내</strong>: 건물 기계식 주차장 및 인근 제휴 주차장 완비
               </p>
             </div>

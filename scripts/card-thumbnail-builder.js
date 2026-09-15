@@ -176,7 +176,7 @@ function generateCardThumbnailSVG({ title, category, tip, pillar1, pillar2, pill
   <g transform="translate(60, 970)">
     <line x1="0" y1="0" x2="960" y2="0" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1" />
     <text x="0" y="38" font-size="18" font-weight="600" fill="#94a3b8" font-family="'Pretendard', 'Malgun Gothic', sans-serif">
-      인천 부평구 경원대로 1404 그랑프리빌딩 7층 (부평역 7번 출구 도보 1분) ｜ ☎ 032-719-3472
+      인천 부평구 경원대로 1412, 2층 (부평역 7번 출구 도보 5분) ｜ ☎ 032-719-3472
     </text>
     <text x="960" y="38" font-size="18" font-weight="800" fill="${accentColor}" text-anchor="end" font-family="'Pretendard', 'Malgun Gothic', sans-serif">
       해아림한의원 부평점

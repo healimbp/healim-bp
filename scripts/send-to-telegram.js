@@ -338,7 +338,7 @@ ${tocItems}
     </h4>
     <ul style="margin: 0 0 18px 0; padding-left: 20px; font-size: 14.5px; color: #4B5563; line-height: 1.85; font-style: normal;">
       <li style="margin-bottom: 6px;"><strong>대표원장:</strong> 권형근 (한방침구과 전문의 1:1 직접 책임 진료)</li>
-      <li style="margin-bottom: 6px;"><strong>오시는 길:</strong> 인천 부평구 경원대로 1404 그랑프리빌딩 7층 (부평역 7번 출구 도보 1분)</li>
+      <li style="margin-bottom: 6px;"><strong>오시는 길:</strong> 인천 부평구 경원대로 1412, 2층 (부평역 7번 출구 도보 5분)</li>
       <li style="margin-bottom: 6px;"><strong>상담 및 예약:</strong> 032-719-3472</li>
       <li style="margin-bottom: 6px;"><strong>진료 시간:</strong> 월·수·금 09:30 ~ 20:00 (야간진료) / 화·목 09:30 ~ 19:00 / 토 09:30 ~ 15:00 (점심시간 없음)</li>
     </ul>

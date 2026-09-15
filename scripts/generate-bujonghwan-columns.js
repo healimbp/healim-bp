@@ -273,7 +273,7 @@ ${sec.content}
     한방침구과 전문의의 1:1 맞춤 진단을 통해 체질에 맞는 <strong>부종환 엔오</strong> 처방과 순환 침구 치료로 가볍고 편안한 일상을 되찾으세요.
   </p>
   <div class="clinic-info-grid">
-    <div><strong>위치:</strong> 부평역 7번 출구 도보 1분 (그랑프리빌딩 7층)</div>
+    <div><strong>위치:</strong> 부평역 7번 출구 도보 5분 (2층 (부평동 534-48))</div>
     <div><strong>진료:</strong> 월·수·금 야간진료 (09:30~20:00) | 화·목 (09:30~19:00) | 토 (09:30~15:00)</div>
     <div><strong>예약/문의:</strong> 032-719-3472 | 네이버 예약 가능</div>
   </div>

@@ -133,7 +133,7 @@ function generateCleanCardSVG({
   <g transform="translate(90, 735)">
     <rect x="0" y="0" width="720" height="54" rx="14" fill="#0f172a" />
     <text x="360" y="33" font-size="15.5" font-weight="800" fill="#ffffff" text-anchor="middle" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
-      해아림한의원 부평점 · 1:1 맞춤 통합진료 클리닉 (부평역 7번 출구 도보 1분)
+      해아림한의원 부평점 · 1:1 맞춤 통합진료 클리닉 (부평역 7번 출구 도보 5분)
     </text>
   </g>
 </svg>`;

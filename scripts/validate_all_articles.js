@@ -34,7 +34,7 @@ dirs.forEach((dir, i) => {
   const faqIdx = result.html.indexOf('❓');
   if (faqIdx !== -1) {
     const faqSub = result.html.substring(faqIdx, result.html.indexOf('👨‍⚕️'));
-    if (faqSub.includes('032-719-3472') || faqSub.includes('그랑프리빌딩')) {
+    if (faqSub.includes('032-719-3472') || faqSub.includes('1412') || faqSub.includes('그랑프리')) {
       console.error(`[${i+1}] ${dir}: FAQ leaked clinic info!`);
       hasError = true;
     }
