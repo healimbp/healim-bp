@@ -1,0 +1,82 @@
+<svg width="1200" height="675" viewBox="0 0 1200 675" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#091b15" />
+      <stop offset="50%" stop-color="#122f25" />
+      <stop offset="100%" stop-color="#071510" />
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.08)" />
+      <stop offset="100%" stop-color="rgba(255,255,255,0.02)" />
+    </linearGradient>
+    <filter id="glow1" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="90" result="blur" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="675" fill="url(#bgGrad)" />
+
+  <!-- Ambient Glow -->
+  <circle cx="1050" cy="120" r="300" fill="#38bdf8" opacity="0.15" filter="url(#glow1)" />
+  <circle cx="150" cy="550" r="280" fill="#2F5D50" opacity="0.25" filter="url(#glow1)" />
+
+  <!-- Outer Glass Frame -->
+  <rect x="40" y="40" width="1120" height="595" rx="24" fill="url(#cardGrad)" stroke="rgba(255,255,255,0.12)" stroke-width="1.5" />
+
+  <!-- Header Section -->
+  <g transform="translate(80, 80)">
+    <!-- Clinic Logo Badge -->
+    <rect x="0" y="0" width="46" height="46" rx="14" fill="#2F5D50" />
+    <text x="23" y="31" font-size="22" font-weight="900" fill="#ffffff" text-anchor="middle" font-family="'Pretendard', 'Malgun Gothic', sans-serif">해</text>
+
+    <!-- Clinic Name -->
+    <text x="60" y="32" font-size="22" font-weight="800" fill="#ffffff" font-family="'Pretendard', 'Malgun Gothic', sans-serif">
+      해아림한의원 부평점 <tspan fill="#a7f3d0" font-weight="600" font-size="18">통합진료센터</tspan>
+    </text>
+
+    <!-- Category Badge -->
+    <rect x="800" y="2" width="240" height="42" rx="21" fill="#2F5D50" />
+    <text x="920" y="28" font-size="16" font-weight="800" fill="#ffffff" text-anchor="middle" font-family="'Pretendard', 'Malgun Gothic', sans-serif">
+      척추·관절 통증
+    </text>
+  </g>
+
+  <!-- Decorative Divider -->
+  <line x1="80" y1="155" x2="1120" y2="155" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
+
+  <!-- Main Headline -->
+  <g transform="translate(80, 235)">
+    <text font-family="'Pretendard', 'Malgun Gothic', 'Noto Sans KR', sans-serif">
+      <tspan x="0" y="0" font-size="44" font-weight="900" fill="#ffffff">자고 일어났는데 목이 안 돌아가고 굳어버린 낙침(落枕)</tspan>
+      <tspan x="0" y="65" font-size="38" font-weight="800" fill="#e2e8f0">급성 경추 관절 잠김을 푸는 추나와 동작침</tspan>
+    </text>
+  </g>
+
+  <!-- Subtitle Feature Card -->
+  <g transform="translate(80, 395)">
+    <rect x="0" y="0" width="1040" height="90" rx="18" fill="rgba(15, 23, 42, 0.6)" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+    
+    <!-- Specialist Tag -->
+    <rect x="25" y="24" width="170" height="42" rx="10" fill="#2F5D50" />
+    <text x="110" y="50" font-size="16" font-weight="800" fill="#ffffff" text-anchor="middle" font-family="'Pretendard', 'Malgun Gothic', sans-serif">
+      한방침구과 전문의
+    </text>
+
+    <text x="215" y="52" font-size="20" font-weight="700" fill="#f8fafc" font-family="'Pretendard', 'Malgun Gothic', sans-serif">
+      권형근 대표원장 1:1 직접 책임 진료 ｜ 비수술 한방 솔루션
+    </text>
+  </g>
+
+  <!-- Footer Information Bar -->
+  <g transform="translate(80, 560)">
+    <circle cx="10" cy="10" r="5" fill="#34d399" />
+    <text x="25" y="16" font-size="16" font-weight="600" fill="#94a3b8" font-family="'Pretendard', 'Malgun Gothic', sans-serif">
+      인천 부평구 경원대로 1404 그랑프리빌딩 7층 (부평역 7번 출구 도보 1분)
+    </text>
+
+    <text x="1040" y="16" font-size="17" font-weight="800" fill="#fbbf24" text-anchor="end" font-family="'Pretendard', 'Malgun Gothic', sans-serif">
+      ☎ 032-719-3472
+    </text>
+  </g>
+</svg>
