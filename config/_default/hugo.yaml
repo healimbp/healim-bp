@@ -41,6 +41,12 @@ markup:
       unsafe: true
 security:
   _merge: deep
+  exec:
+    allow:
+      - '^(dart-sass-embedded|sass-embedded|dart-sass|sass)$'
+      - '^(go)$'
+      - '^(npx|postcss|tailwindcss)$'
+      - '^(node)$'
 sitemap:
   _merge: deep
 
