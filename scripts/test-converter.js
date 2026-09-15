@@ -51,9 +51,9 @@ function convertMarkdownToTistoryHTML(mdContent, slug) {
 
   // 3. Extract TOC
   let tocBoxHTML = '';
-  const tocMatch = bodyStr.match(/<div class="toc">([\s\S]*?)<\/div>/i);
+  const tocMatch = bodyStr.match(/<div class="toc">([\s\S]*?<\/ol>\s*<\/div>)/i);
   if (tocMatch) {
-    const lis = tocMatch[1].match(/<li>(.*?)<\/li>/gi) || [];
+    const lis = tocMatch[1].match(/<li>([\s\S]*?)<\/li>/gi) || [];
     const tocItems = lis.map((li, idx) => {
       const text = li.replace(/<\/?li>/gi, '').trim();
       const num = String(idx + 1).padStart(2, '0');
@@ -64,7 +64,7 @@ function convertMarkdownToTistoryHTML(mdContent, slug) {
     <div style="font-size: 16.5px; font-weight: 800; color: #1E4638; margin-bottom: 14px; letter-spacing: -0.01em;">📌 이 칼럼에서 다루는 6대 핵심 목차</div>
 ${tocItems}
   </div>`;
-    bodyStr = bodyStr.replace(/<div class="toc">[\s\S]*?<\/div>/i, '');
+    bodyStr = bodyStr.replace(/<div class="toc">[\s\S]*?<\/ol>\s*<\/div>/i, '');
   }
 
   // 4. Parse sections
