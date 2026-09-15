@@ -1,6 +1,18 @@
 User-agent: *
 Allow: /
 
+# Naver Search Advisor (Yeti)
+User-agent: Yeti
+Allow: /
+
+# Daum & Kakao
+User-agent: Daumoa
+Allow: /
+
+# Googlebot
+User-agent: Googlebot
+Allow: /
+
 # AI & Search Engine Crawlers
 User-agent: GPTBot
 Allow: /
@@ -28,4 +40,4 @@ Allow: /
 
 # Sitemap & LLMs Context Specification
 Sitemap: {{ "sitemap.xml" | absURL }}
-# LLMs Context: {{ "llms.txt" | absURL }}
+
