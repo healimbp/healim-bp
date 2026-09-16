@@ -40,7 +40,7 @@
   <!-- 2. Main Title (High-Impact Crisp Pitch Black) -->
   <g transform="translate(90, 235)">
     <text font-size="36" font-weight="900" fill="#0f172a" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.03em">
-      엄지손가락 움직일 때 찌릿한 손목 통증, 드퀘르벵(손목건초염) 비수술 약침과 침도 치료
+      엄지손가락 움직일 때 찌릿한 손목 통증, 드퀘르벵(손목건초염) 비수술 약침과 약침 치료
     </text>
   </g>
 
@@ -95,7 +95,7 @@
     <text x="55" y="65" font-size="22" font-weight="900" fill="#ffffff" text-anchor="middle" font-family="Pretendard, 'Malgun Gothic', sans-serif">3</text>
     <!-- Card Text -->
     <text x="110" y="46" font-size="20" font-weight="900" fill="#0f172a" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
-      미세 침도 유착 박리 &amp; 손목 관절 추나
+      미세 약침 유착 박리 &amp; 손목 관절 추나
     </text>
     <text x="110" y="76" font-size="14.5" font-weight="600" fill="#475569" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.01em">
       협착된 건막을 미세 절개하여 힘줄의 부드러운 활주 회복

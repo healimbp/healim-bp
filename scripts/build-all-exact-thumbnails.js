@@ -25,7 +25,7 @@ const thumbnailConfigs = {
     title: '부평 테니스엘보 · 외측상과염 한방 치료',
     subTitle: '손상된 힘줄 건증을 회복하고 팔꿈치 관절을 바로잡는 비수술 치료',
     step1: { title: 'ECRB 힘줄 건증(Tendinosis) 정밀 진단', desc: '미세 파열과 저혈관 부위의 산소 결핍 분석' },
-    step2: { title: '소염약침 & 미세 침도 유착 박리', desc: '스테로이드 없이 염증 배출 및 혈류 공급' },
+    step2: { title: '소염약침 & 심부 근막 이완 & 정밀 소염약침', desc: '스테로이드 없이 염증 배출 및 혈류 공급' },
     step3: { title: '주관절 감압 추나 & 인대 강화 한약', desc: '콜라겐 합성 촉진 및 팔꿈치 운동사슬 정상화' }
   },
   'golf-elbow-medial-epicondylitis': {
@@ -43,7 +43,7 @@ const thumbnailConfigs = {
     title: '손목터널증후군 · 건초염 한방 치료',
     subTitle: '수술 없이 신경 압박을 낮추고 손목 관절을 바로잡는 감압 침구',
     step1: { title: '정중신경 압박 & 횡수근인대 비후 진단', desc: '팔렌·핑겔스타인 30초 신경 손상도 체크' },
-    step2: { title: '수근관 미세 감압 침도 & 소염약침', desc: '수술 없이 신경 압박을 낮추고 붓기 배출' },
+    step2: { title: '수근관 미세 감압 심부 전침 & 소염약침', desc: '수술 없이 신경 압박을 낮추고 붓기 배출' },
     step3: { title: '수근골 교정 추나 & 완관절 테이핑', desc: '손목 8개 뼈의 균형 정렬 및 신경 재생' }
   },
   'ankle-sprain-ligament-chuna': {
@@ -70,7 +70,7 @@ const thumbnailConfigs = {
     title: '부평 거북목 · 일자목 증후군 교정 추나',
     subTitle: '굳어진 경추 C커브를 복원하고 뇌 혈류를 개선하는 체형 교정',
     step1: { title: '경추 C커브 소실 & 흉추 후만 정밀 체형 분석', desc: '상부 승모근·견갑거근 단축 긴장도 측정' },
-    step2: { title: '경추 이완 추나 & 후두하근 침도요법', desc: '굳은 목 관절을 열고 뇌 혈류 공급 정상화' },
+    step2: { title: '경추 이완 추나 & 후두하근 소염약침 및 심부 전침 요법', desc: '굳은 목 관절을 열고 뇌 혈류 공급 정상화' },
     step3: { title: '1:1 맞춤 근막 강화 침구 치료', desc: '목디스크 진행 차단 및 바른 척추 정렬 복원' }
   },
   'cervicogenic-headache-neck-chuna': {
@@ -88,7 +88,7 @@ const thumbnailConfigs = {
     title: '부평 오십견 · 회전근개파열 한방 치료',
     subTitle: '굳어버린 견관절막 유착을 열고 가동 범위를 복원하는 한방 치료',
     step1: { title: '관절낭 유착 & 극상근건 파열 정밀 감별', desc: '어깨 전방위 관절 가동 범위(ROM) 측정' },
-    step2: { title: '견관절 유착 박리 침도 & 관절강 약침', desc: '단단하게 굳은 관절막을 열고 염증 제거' },
+    step2: { title: '견관절 유착 박리 심부 전침 & 관절강 약침', desc: '단단하게 굳은 관절막을 열고 염증 제거' },
     step3: { title: '어깨 관절 가동 추나 & 근골 한약', desc: '가동 범위 정상 회복 및 야간 통증 차단' }
   },
   'plantar-fasciitis-heel-pain': {
@@ -268,7 +268,7 @@ const thumbnailConfigs = {
     title: '부평 골반 비대칭 · 틀어진 골반 교정 추나',
     subTitle: '장골·천골 변위를 바로잡고 만성 요통과 다리 길이 차이를 해결하는 비수술 치료',
     step1: { title: '골반 비틀림 & 다리 길이 차이 정밀 진단', desc: '장골 전후방 회전변위 및 천장관절 기능 장애 측정' },
-    step2: { title: '골반 분절 교정 추나 & 이상근 이완 침도', desc: '골반 수평축 복원 및 좌골신경 압박 완화' },
+    step2: { title: '골반 분절 교정 추나 & 이상근 이완 심부 전침', desc: '골반 수평축 복원 및 좌골신경 압박 완화' },
     step3: { title: '체형 안정화 한방 침구 & 근막 강화', desc: '척추-골반 지지대 회복으로 요통 재발 차단' }
   }
 };
