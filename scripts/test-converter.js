@@ -173,7 +173,7 @@ ${tocItems}
       <li style="margin-bottom: 6px;"><strong>오시는 길:</strong> 인천 부평구 경원대로 1412, 2층 (부평역 7번 출구 도보 5분)</li>
       <li style="margin-bottom: 6px; color: #2F5D50;"><strong>진료권역:</strong> 부평동, 삼산동, 산곡동, 부개동, 청천동, 갈산동, 십정동, 일신동 등 부평구 전역 및 인근 지역</li>
       <li style="margin-bottom: 6px;"><strong>상담 및 예약:</strong> 032-719-3472</li>
-      <li style="margin-bottom: 6px;"><strong>진료 시간:</strong> 월·수·금 09:30 ~ 20:00 (야간진료) / 화·목 09:30 ~ 19:00 / 토 09:30 ~ 15:00 (점심시간 없음)</li>
+      <li style="margin-bottom: 6px;"><strong>진료 시간:</strong> 월·수·금 10:00 ~ 20:00 (야간진료) / 화 10:00 ~ 19:00 / 토 09:00 ~ 15:00 (점심시간 없음) / 목·일 정기휴진 (공휴일 09:00~13:00)</li>
     </ul>
 
     <!-- 원클릭 바로가기 버튼 그룹 -->

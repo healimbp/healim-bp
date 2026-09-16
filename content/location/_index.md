@@ -59,21 +59,26 @@ sections:
               <tbody>
                 <tr>
                   <td class="font-bold text-[#2F5D50] text-left px-6 py-4">월 · 수 · 금</td>
-                  <td class="font-bold px-6 py-4">09:30 ~ 20:00</td>
+                  <td class="font-bold px-6 py-4">10:00 ~ 20:00</td>
                   <td class="text-xs text-[#2F5D50] font-semibold px-6 py-4">직장인 야간진료 (점심 13:00 ~ 14:00)</td>
                 </tr>
                 <tr>
-                  <td class="font-bold text-left px-6 py-4">화 · 목</td>
-                  <td class="px-6 py-4">09:30 ~ 19:00</td>
+                  <td class="font-bold text-left px-6 py-4">화 요 일</td>
+                  <td class="px-6 py-4">10:00 ~ 19:00</td>
                   <td class="text-xs text-slate-500 px-6 py-4">일반 진료 (점심 13:00 ~ 14:00)</td>
                 </tr>
                 <tr>
                   <td class="font-bold text-left px-6 py-4">토 요 일</td>
-                  <td class="font-semibold text-emerald-700 px-6 py-4">09:30 ~ 15:00</td>
+                  <td class="font-semibold text-emerald-700 px-6 py-4">09:00 ~ 15:00</td>
                   <td class="text-xs text-emerald-600 font-semibold px-6 py-4">점심시간 없이 연속 진료</td>
                 </tr>
                 <tr>
-                  <td class="text-left px-6 py-4">일 요 일</td>
+                  <td class="text-left px-6 py-4">공 휴 일</td>
+                  <td class="font-semibold text-[#2F5D50] px-6 py-4">09:00 ~ 13:00</td>
+                  <td class="text-xs text-[#2F5D50] font-semibold px-6 py-4">점심시간 없이 연속 진료</td>
+                </tr>
+                <tr>
+                  <td class="text-left px-6 py-4">목 · 일요일</td>
                   <td class="text-rose-500 font-medium px-6 py-4">정기 휴진</td>
                   <td class="text-xs text-slate-400 px-6 py-4">휴진 (네이버 예약은 24시간 접수 가능)</td>
                 </tr>
@@ -81,7 +86,7 @@ sections:
             </table>
           </div>
           <p class="text-xs text-slate-500 mt-4 bg-[#FAF8F3] p-3.5 rounded-xl border border-[#DDE6E1]">
-            ※ 평일 점심시간은 <strong>13:00 ~ 14:00</strong>이며, 토요일은 점심시간 없이 진료합니다. 침구치료 및 추나요법을 원활히 받으시려면 마감 1시간 전까지 내원해 주시기 바랍니다.
+            ※ 평일 점심시간은 <strong>13:00 ~ 14:00</strong>이며, 토요일 및 공휴일은 점심시간 없이 진료합니다. 목요일과 일요일은 정기 휴진입니다. 침구치료 및 추나요법을 원활히 받으시려면 마감 1시간 전까지 내원해 주시기 바랍니다.
           </p>
         </div>
 

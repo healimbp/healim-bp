@@ -445,28 +445,33 @@ sections:
               <tbody>
                 <tr>
                   <td class="font-bold text-[#2F5D50]">월 · 수 · 금</td>
-                  <td class="font-bold">09:30 ~ 20:00</td>
+                  <td class="font-bold">10:00 ~ 20:00</td>
                   <td class="text-xs text-[#2F5D50] font-semibold">직장인 야간진료</td>
                 </tr>
                 <tr>
-                  <td class="font-bold">화 · 목</td>
-                  <td>09:30 ~ 19:00</td>
+                  <td class="font-bold">화 요 일</td>
+                  <td>10:00 ~ 19:00</td>
                   <td class="text-xs text-slate-500">일반 진료</td>
                 </tr>
                 <tr>
                   <td class="font-bold">토 요 일</td>
-                  <td class="font-semibold">09:30 ~ 15:00</td>
+                  <td class="font-semibold">09:00 ~ 15:00</td>
                   <td class="text-xs text-emerald-600 font-semibold">점심시간 없음</td>
                 </tr>
                 <tr>
-                  <td>일 요 일</td>
+                  <td class="font-bold">공 휴 일</td>
+                  <td class="font-semibold text-[#2F5D50]">09:00 ~ 13:00</td>
+                  <td class="text-xs text-[#2F5D50] font-semibold">점심시간 없음</td>
+                </tr>
+                <tr>
+                  <td>목 · 일요일</td>
                   <td class="text-rose-500 font-medium">정기 휴진</td>
                   <td class="text-xs text-slate-400">휴진</td>
                 </tr>
               </tbody>
             </table>
             <p class="text-xs text-slate-500 mt-4 bg-[#FAF8F3] p-3 rounded-xl border border-[#DDE6E1]">
-              ※ <strong>평일 점심시간</strong>: 13:00 ~ 14:00 (토요일은 점심시간 없이 연속 진료합니다)
+              ※ <strong>평일 점심시간</strong>: 13:00 ~ 14:00 (토·공휴일 점심시간 없음 / 매주 목·일 정기휴진)
             </p>
           </div>
 
