@@ -19,7 +19,7 @@
   <g transform="translate(450, 64)">
     <rect x="-190" y="-22" width="380" height="44" rx="22" fill="#0d9488" />
     <text x="0" y="6" font-size="16.5" font-weight="900" fill="#ffffff" text-anchor="middle" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
-      교통사고 후유증
+      교통사고 후유증 &amp; 자동차보험 케어
     </text>
   </g>
 
@@ -31,23 +31,23 @@
   <!-- Content inside White Card -->
   <!-- 1. Sub-Hook Pill (Light Mint Green Background + Dark Green Bold Text) -->
   <g transform="translate(90, 155)">
-    <rect x="0" y="0" width="580" height="38" rx="8" fill="#ecfdf5" />
-    <text x="16" y="25" font-size="16" font-weight="900" fill="#047857" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
-      차만 타면 심장이 쿵쾅거리고 밤마다 악몽과 불면증에 시달릴 때
+    <rect x="0" y="0" width="620" height="38" rx="8" fill="#ecfdf5" />
+    <text x="16" y="25" font-size="15.5" font-weight="900" fill="#047857" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
+      사고 후 가슴 두근거림, 불안, 불면, 깜짝 놀람
     </text>
   </g>
 
   <!-- 2. Main Title (High-Impact Crisp Pitch Black) -->
   <g transform="translate(90, 235)">
-    <text font-size="36" font-weight="900" fill="#0f172a" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.03em">
-      사고 후 가슴 두근거림과 불면·불안증, 교통사고 외상후 스트레스 증후군 한방 진정 한약
+    <text font-size="34" font-weight="900" fill="#0f172a" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.03em">
+      교통사고 외상후 스트레스 · 심담허겁 한방 치료
     </text>
   </g>
 
   <!-- 3. Subtitle Description -->
   <g transform="translate(90, 275)">
-    <text font-size="20" font-weight="800" fill="#334155" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
-      육체적 충격과 신경계 트라우마를 동시에 치료하는 자동차보험 1:1 한방 케어
+    <text font-size="18.5" font-weight="800" fill="#334155" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
+      과열된 교감신경을 진정시키고 놀란 심장을 달래는 안신 한약
     </text>
   </g>
 
@@ -62,11 +62,11 @@
     <circle cx="55" cy="57" r="24" fill="#0d9488" />
     <text x="55" y="65" font-size="22" font-weight="900" fill="#ffffff" text-anchor="middle" font-family="Pretendard, 'Malgun Gothic', sans-serif">1</text>
     <!-- Card Text -->
-    <text x="110" y="46" font-size="20" font-weight="900" fill="#0f172a" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
-      심신 복합 외상 평가 &amp; 자율신경 균형 검사
+    <text x="110" y="46" font-size="19.5" font-weight="900" fill="#0f172a" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
+      급성 충격 후 자율신경 불균형 &amp; 심담허겁 진단
     </text>
     <text x="110" y="76" font-size="14.5" font-weight="600" fill="#475569" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.01em">
-      사고 충격으로 인한 교감신경 과흥분 및 심리적 충격 체크
+      두근거림, 소화장애, 수면장애 종합 평가
     </text>
   </g>
 
@@ -78,11 +78,11 @@
     <circle cx="55" cy="57" r="24" fill="#d97706" />
     <text x="55" y="65" font-size="22" font-weight="900" fill="#ffffff" text-anchor="middle" font-family="Pretendard, 'Malgun Gothic', sans-serif">2</text>
     <!-- Card Text -->
-    <text x="110" y="46" font-size="20" font-weight="900" fill="#0f172a" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
-      안신청뇌 맞춤 어혈 한약 처방
+    <text x="110" y="46" font-size="19.5" font-weight="900" fill="#0f172a" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
+      온담탕·가미소요산 계열 맞춤 안신 한약
     </text>
     <text x="110" y="76" font-size="14.5" font-weight="600" fill="#475569" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.01em">
-      뇌 신경계를 진정시키고 놀란 심장을 안정시키는 한약
+      놀란 신경계를 가라앉히고 미세 어혈 동시 제거
     </text>
   </g>
 
@@ -94,18 +94,18 @@
     <circle cx="55" cy="57" r="24" fill="#2563eb" />
     <text x="55" y="65" font-size="22" font-weight="900" fill="#ffffff" text-anchor="middle" font-family="Pretendard, 'Malgun Gothic', sans-serif">3</text>
     <!-- Card Text -->
-    <text x="110" y="46" font-size="20" font-weight="900" fill="#0f172a" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
-      두개천골 요법(CST) &amp; 심신 이완 약침 치료
+    <text x="110" y="46" font-size="19.5" font-weight="900" fill="#0f172a" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
+      자율신경 조절 침구 &amp; 전신 이완 케어
     </text>
     <text x="110" y="76" font-size="14.5" font-weight="600" fill="#475569" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.01em">
-      긴장된 두개골과 척추막의 긴장을 풀어 전신 이완 유도
+      자동차보험 100% 적용 (본인부담금 0원)
     </text>
   </g>
 
   <!-- 8. Bottom Dark Navy Footer Capsule -->
   <g transform="translate(90, 735)">
     <rect x="0" y="0" width="720" height="54" rx="14" fill="#0f172a" />
-    <text x="360" y="33" font-size="15.5" font-weight="800" fill="#ffffff" text-anchor="middle" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
+    <text x="360" y="33" font-size="15" font-weight="800" fill="#ffffff" text-anchor="middle" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
       해아림한의원 부평점 · 1:1 맞춤 통합진료 클리닉 (부평역 7번 출구 도보 5분)
     </text>
   </g>

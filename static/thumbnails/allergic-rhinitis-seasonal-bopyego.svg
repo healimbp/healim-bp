@@ -19,7 +19,7 @@
   <g transform="translate(450, 64)">
     <rect x="-190" y="-22" width="380" height="44" rx="22" fill="#0d9488" />
     <text x="0" y="6" font-size="16.5" font-weight="900" fill="#ffffff" text-anchor="middle" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
-      호흡기·보폐고
+      만성기침·호흡기 &amp; 보폐고 클리닉
     </text>
   </g>
 
@@ -31,23 +31,23 @@
   <!-- Content inside White Card -->
   <!-- 1. Sub-Hook Pill (Light Mint Green Background + Dark Green Bold Text) -->
   <g transform="translate(90, 155)">
-    <rect x="0" y="0" width="580" height="38" rx="8" fill="#ecfdf5" />
-    <text x="16" y="25" font-size="16" font-weight="900" fill="#047857" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
-      찬바람만 불면 쏟아지는 맑은 콧물과 발작성 재채기, 꽉 막힌 코
+    <rect x="0" y="0" width="620" height="38" rx="8" fill="#ecfdf5" />
+    <text x="16" y="25" font-size="15.5" font-weight="900" fill="#047857" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
+      환절기마다 터지는 콧물·재채기·눈 가려움증
     </text>
   </g>
 
   <!-- 2. Main Title (High-Impact Crisp Pitch Black) -->
   <g transform="translate(90, 235)">
-    <text font-size="36" font-weight="900" fill="#0f172a" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.03em">
-      환절기마다 반복되는 콧물·재채기·눈 가려움, 코 점막 면역을 회복하는 보폐고 비염 치료
+    <text font-size="34" font-weight="900" fill="#0f172a" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.03em">
+      알레르기 비염 · 만성 콧물 · 보폐고 치료
     </text>
   </g>
 
   <!-- 3. Subtitle Description -->
   <g transform="translate(90, 275)">
-    <text font-size="20" font-weight="800" fill="#334155" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
-      항히스타민제 의존 없이 코 점막의 면역력과 재생력을 높이는 1:1 보폐고 치료
+    <text font-size="18.5" font-weight="800" fill="#334155" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
+      면역 과민반응을 진정시키고 비강 점막 방어벽을 재건하는 한방 치료
     </text>
   </g>
 
@@ -62,11 +62,11 @@
     <circle cx="55" cy="57" r="24" fill="#0d9488" />
     <text x="55" y="65" font-size="22" font-weight="900" fill="#ffffff" text-anchor="middle" font-family="Pretendard, 'Malgun Gothic', sans-serif">1</text>
     <!-- Card Text -->
-    <text x="110" y="46" font-size="20" font-weight="900" fill="#0f172a" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
-      비강 내시경 점막 상태 &amp; 한열 체질 분석
+    <text x="110" y="46" font-size="19.5" font-weight="900" fill="#0f172a" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
+      폐한 &amp; 비폐기허 점막 면역 진단
     </text>
     <text x="110" y="76" font-size="14.5" font-weight="600" fill="#475569" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.01em">
-      점막 창백도, 하비갑개 비대, 건조도 정밀 진단
+      온도·습도 민감도 및 비강 점막 창백·울혈도 평가
     </text>
   </g>
 
@@ -78,11 +78,11 @@
     <circle cx="55" cy="57" r="24" fill="#d97706" />
     <text x="55" y="65" font-size="22" font-weight="900" fill="#ffffff" text-anchor="middle" font-family="Pretendard, 'Malgun Gothic', sans-serif">2</text>
     <!-- Card Text -->
-    <text x="110" y="46" font-size="20" font-weight="900" fill="#0f172a" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
-      호흡기 보습·소염 한방 보폐고 처방
+    <text x="110" y="46" font-size="19.5" font-weight="900" fill="#0f172a" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
+      전통 옹기 고농축 수제 보폐고
     </text>
     <text x="110" y="76" font-size="14.5" font-weight="600" fill="#475569" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.01em">
-      폐음을 보하고 호흡기 상피세포 면역 장벽 복원
+      호흡기 점막에 수분을 공급하고 항알레르기 면역 강화
     </text>
   </g>
 
@@ -94,18 +94,18 @@
     <circle cx="55" cy="57" r="24" fill="#2563eb" />
     <text x="55" y="65" font-size="22" font-weight="900" fill="#ffffff" text-anchor="middle" font-family="Pretendard, 'Malgun Gothic', sans-serif">3</text>
     <!-- Card Text -->
-    <text x="110" y="46" font-size="20" font-weight="900" fill="#0f172a" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
-      비강 배농 요법 &amp; 비점막 재생 침구 치료
+    <text x="110" y="46" font-size="19.5" font-weight="900" fill="#0f172a" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
+      비강 배농 청열 요법 &amp; 면역 비염 한약
     </text>
     <text x="110" y="76" font-size="14.5" font-weight="600" fill="#475569" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.01em">
-      부비동 내 고인 콧물을 배출하고 비강 혈류 순환 촉진
+      환절기에도 재발 없는 튼튼한 코 호흡 환경 완성
     </text>
   </g>
 
   <!-- 8. Bottom Dark Navy Footer Capsule -->
   <g transform="translate(90, 735)">
     <rect x="0" y="0" width="720" height="54" rx="14" fill="#0f172a" />
-    <text x="360" y="33" font-size="15.5" font-weight="800" fill="#ffffff" text-anchor="middle" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
+    <text x="360" y="33" font-size="15" font-weight="800" fill="#ffffff" text-anchor="middle" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
       해아림한의원 부평점 · 1:1 맞춤 통합진료 클리닉 (부평역 7번 출구 도보 5분)
     </text>
   </g>

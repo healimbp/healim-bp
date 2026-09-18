@@ -19,7 +19,7 @@
   <g transform="translate(450, 64)">
     <rect x="-190" y="-22" width="380" height="44" rx="22" fill="#0d9488" />
     <text x="0" y="6" font-size="16.5" font-weight="900" fill="#ffffff" text-anchor="middle" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
-      척추·관절 통증
+      척추·관절 &amp; 추나 클리닉
     </text>
   </g>
 
@@ -31,23 +31,23 @@
   <!-- Content inside White Card -->
   <!-- 1. Sub-Hook Pill (Light Mint Green Background + Dark Green Bold Text) -->
   <g transform="translate(90, 155)">
-    <rect x="0" y="0" width="580" height="38" rx="8" fill="#ecfdf5" />
-    <text x="16" y="25" font-size="16" font-weight="900" fill="#047857" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
-      기침하거나 기지개 켤 때 갈비뼈를 따라 찌릿한 신경통
+    <rect x="0" y="0" width="620" height="38" rx="8" fill="#ecfdf5" />
+    <text x="16" y="25" font-size="15.5" font-weight="900" fill="#047857" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
+      숨 들이쉴 때마다 콕콕 쑤시고 결리는 가슴·옆구리 통증
     </text>
   </g>
 
   <!-- 2. Main Title (High-Impact Crisp Pitch Black) -->
   <g transform="translate(90, 235)">
-    <text font-size="36" font-weight="900" fill="#0f172a" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.03em">
-      숨쉴 때 콕콕 쑤시는 옆구리와 가슴 통증, 늑간신경통과 담결림 한방 감별 치료
+    <text font-size="34" font-weight="900" fill="#0f172a" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.03em">
+      늑간신경통 · 가슴 옆구리 통증 한방 치료
     </text>
   </g>
 
   <!-- 3. Subtitle Description -->
   <g transform="translate(90, 275)">
-    <text font-size="20" font-weight="800" fill="#334155" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
-      흉추 신경근 압박과 늑간근 연축을 해소하는 흉곽 교정 추나 &amp; 약침
+    <text font-size="18.5" font-weight="800" fill="#334155" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
+      갈비뼈 사이 신경 압박을 풀고 흉곽 팽창을 원활하게 돕는 신경 감압
     </text>
   </g>
 
@@ -62,11 +62,11 @@
     <circle cx="55" cy="57" r="24" fill="#0d9488" />
     <text x="55" y="65" font-size="22" font-weight="900" fill="#ffffff" text-anchor="middle" font-family="Pretendard, 'Malgun Gothic', sans-serif">1</text>
     <!-- Card Text -->
-    <text x="110" y="46" font-size="20" font-weight="900" fill="#0f172a" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
-      늑간신경 주행 경로 및 흉추 정렬 정밀 감별
+    <text x="110" y="46" font-size="19.5" font-weight="900" fill="#0f172a" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
+      늑간신경 주행로 염증 &amp; 흉추 후관절 변위 진단
     </text>
     <text x="110" y="76" font-size="14.5" font-weight="600" fill="#475569" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.01em">
-      심장·폐 질환 및 늑골 골절과의 안전 감별 검사
+      심장·폐 질환과의 정밀 감별 및 압통점 체크
     </text>
   </g>
 
@@ -78,11 +78,11 @@
     <circle cx="55" cy="57" r="24" fill="#d97706" />
     <text x="55" y="65" font-size="22" font-weight="900" fill="#ffffff" text-anchor="middle" font-family="Pretendard, 'Malgun Gothic', sans-serif">2</text>
     <!-- Card Text -->
-    <text x="110" y="46" font-size="20" font-weight="900" fill="#0f172a" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
-      흉추 분절 신경약침 &amp; 심층 봉약침
+    <text x="110" y="46" font-size="19.5" font-weight="900" fill="#0f172a" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
+      늑간근 이완 정밀 소염약침 &amp; 심부 침구
     </text>
     <text x="110" y="76" font-size="14.5" font-weight="600" fill="#475569" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.01em">
-      압박된 늑간신경 주변 염증과 부종 즉각 완화
+      갈비뼈 사이 굳은 근막을 풀고 신경 자극 진정
     </text>
   </g>
 
@@ -94,18 +94,18 @@
     <circle cx="55" cy="57" r="24" fill="#2563eb" />
     <text x="55" y="65" font-size="22" font-weight="900" fill="#ffffff" text-anchor="middle" font-family="Pretendard, 'Malgun Gothic', sans-serif">3</text>
     <!-- Card Text -->
-    <text x="110" y="46" font-size="20" font-weight="900" fill="#0f172a" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
-      늑골-흉추 관절 가동 추나 &amp; 소염약침
+    <text x="110" y="46" font-size="19.5" font-weight="900" fill="#0f172a" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
+      흉추 감압 교정 추나 &amp; 기혈 순환 한약
     </text>
     <text x="110" y="76" font-size="14.5" font-weight="600" fill="#475569" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.01em">
-      틀어진 흉곽 관절을 열어 호흡 시 늑간 압박 해제
+      깊은 호흡 시에도 결림 없는 편안한 흉곽 복원
     </text>
   </g>
 
   <!-- 8. Bottom Dark Navy Footer Capsule -->
   <g transform="translate(90, 735)">
     <rect x="0" y="0" width="720" height="54" rx="14" fill="#0f172a" />
-    <text x="360" y="33" font-size="15.5" font-weight="800" fill="#ffffff" text-anchor="middle" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
+    <text x="360" y="33" font-size="15" font-weight="800" fill="#ffffff" text-anchor="middle" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
       해아림한의원 부평점 · 1:1 맞춤 통합진료 클리닉 (부평역 7번 출구 도보 5분)
     </text>
   </g>

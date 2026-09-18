@@ -19,7 +19,7 @@
   <g transform="translate(450, 64)">
     <rect x="-190" y="-22" width="380" height="44" rx="22" fill="#0d9488" />
     <text x="0" y="6" font-size="16.5" font-weight="900" fill="#ffffff" text-anchor="middle" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
-      맞춤보약·피로회복
+      맞춤보약 &amp; 신경 클리닉
     </text>
   </g>
 
@@ -31,23 +31,23 @@
   <!-- Content inside White Card -->
   <!-- 1. Sub-Hook Pill (Light Mint Green Background + Dark Green Bold Text) -->
   <g transform="translate(90, 155)">
-    <rect x="0" y="0" width="580" height="38" rx="8" fill="#ecfdf5" />
-    <text x="16" y="25" font-size="16" font-weight="900" fill="#047857" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
-      조용한 밤마다 심해지는 귀 울림과 머리가 맑지 않은 어지럼증
+    <rect x="0" y="0" width="620" height="38" rx="8" fill="#ecfdf5" />
+    <text x="16" y="25" font-size="15.5" font-weight="900" fill="#047857" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
+      귀에서 삐- 소리와 머리가 핑 도는 만성 어지럼증
     </text>
   </g>
 
   <!-- 2. Main Title (High-Impact Crisp Pitch Black) -->
   <g transform="translate(90, 235)">
-    <text font-size="36" font-weight="900" fill="#0f172a" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.03em">
-      귀에서 삐 소리와 빙빙 도는 어지럼증, 경추 정렬과 뇌 혈류를 개선하는 한방 이명 클리닉
+    <text font-size="34" font-weight="900" fill="#0f172a" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.03em">
+      이명 · 어지럼증 · 자율신경 뇌 혈류 한방 치료
     </text>
   </g>
 
   <!-- 3. Subtitle Description -->
   <g transform="translate(90, 275)">
-    <text font-size="20" font-weight="800" fill="#334155" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
-      상부 경추 교정과 미세 청각 신경 혈류 개선 한약으로 다스리는 1:1 이명 케어
+    <text font-size="18.5" font-weight="800" fill="#334155" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
+      경추 정렬을 바로잡고 내이 혈류를 개선하는 두개천골 추나 &amp; 청신 한약
     </text>
   </g>
 
@@ -62,11 +62,11 @@
     <circle cx="55" cy="57" r="24" fill="#0d9488" />
     <text x="55" y="65" font-size="22" font-weight="900" fill="#ffffff" text-anchor="middle" font-family="Pretendard, 'Malgun Gothic', sans-serif">1</text>
     <!-- Card Text -->
-    <text x="110" y="46" font-size="20" font-weight="900" fill="#0f172a" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
-      경추성·혈관성·신경성 이명 정밀 체질 감별
+    <text x="110" y="46" font-size="19.5" font-weight="900" fill="#0f172a" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
+      상부경추 아탈구 &amp; 내이 달팽이관 허혈 진단
     </text>
     <text x="110" y="76" font-size="14.5" font-weight="600" fill="#475569" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.01em">
-      이비인후과 검사상 구조적 이상 없는 기능성 이명 분석
+      이비인후과 검사상 이상 없는 척추·신경 기인성 감별
     </text>
   </g>
 
@@ -78,11 +78,11 @@
     <circle cx="55" cy="57" r="24" fill="#d97706" />
     <text x="55" y="65" font-size="22" font-weight="900" fill="#ffffff" text-anchor="middle" font-family="Pretendard, 'Malgun Gothic', sans-serif">2</text>
     <!-- Card Text -->
-    <text x="110" y="46" font-size="20" font-weight="900" fill="#0f172a" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
-      상부 경추(C1-C2) &amp; 턱관절 정밀 추나
+    <text x="110" y="46" font-size="19.5" font-weight="900" fill="#0f172a" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
+      경추-두개골 교정 추나 &amp; 측두근 이완 약침
     </text>
     <text x="110" y="76" font-size="14.5" font-weight="600" fill="#475569" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.01em">
-      추골동맥 압박을 풀고 내이 혈류 공급 활성화
+      추골동맥 혈류를 열어 귀 신경계 산소 공급 촉진
     </text>
   </g>
 
@@ -94,18 +94,18 @@
     <circle cx="55" cy="57" r="24" fill="#2563eb" />
     <text x="55" y="65" font-size="22" font-weight="900" fill="#ffffff" text-anchor="middle" font-family="Pretendard, 'Malgun Gothic', sans-serif">3</text>
     <!-- Card Text -->
-    <text x="110" y="46" font-size="20" font-weight="900" fill="#0f172a" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
-      청신경 재생 &amp; 뇌신경 안정 맞춤 한약
+    <text x="110" y="46" font-size="19.5" font-weight="900" fill="#0f172a" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
+      청신안신 맞춤 한약 처방
     </text>
     <text x="110" y="76" font-size="14.5" font-weight="600" fill="#475569" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.01em">
-      과흥분된 청각 뇌피질을 진정시키고 기혈을 보강
+      과흥분된 청신경 진정 및 만성 뇌 피로 회복
     </text>
   </g>
 
   <!-- 8. Bottom Dark Navy Footer Capsule -->
   <g transform="translate(90, 735)">
     <rect x="0" y="0" width="720" height="54" rx="14" fill="#0f172a" />
-    <text x="360" y="33" font-size="15.5" font-weight="800" fill="#ffffff" text-anchor="middle" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
+    <text x="360" y="33" font-size="15" font-weight="800" fill="#ffffff" text-anchor="middle" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
       해아림한의원 부평점 · 1:1 맞춤 통합진료 클리닉 (부평역 7번 출구 도보 5분)
     </text>
   </g>

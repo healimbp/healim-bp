@@ -19,7 +19,7 @@
   <g transform="translate(450, 64)">
     <rect x="-190" y="-22" width="380" height="44" rx="22" fill="#0d9488" />
     <text x="0" y="6" font-size="16.5" font-weight="900" fill="#ffffff" text-anchor="middle" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
-      척추·관절 &amp; 추나 클리닉
+      만성기침·호흡기 &amp; 보폐고 클리닉
     </text>
   </g>
 
@@ -33,21 +33,21 @@
   <g transform="translate(90, 155)">
     <rect x="0" y="0" width="620" height="38" rx="8" fill="#ecfdf5" />
     <text x="16" y="25" font-size="15.5" font-weight="900" fill="#047857" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
-      아침 첫발 디딜 때 뒤꿈치가 찢어질 듯한 통증
+      삼켜도 안 넘어가고 뱉어도 안 나오는 목 안의 걸림감
     </text>
   </g>
 
   <!-- 2. Main Title (High-Impact Crisp Pitch Black) -->
   <g transform="translate(90, 235)">
     <text font-size="34" font-weight="900" fill="#0f172a" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.03em">
-      족저근막염 · 발바닥 통증 한방 치료
+      만성 목 이물감 · 매핵기 · 보폐고 한방 치료
     </text>
   </g>
 
   <!-- 3. Subtitle Description -->
   <g transform="translate(90, 275)">
     <text font-size="18.5" font-weight="800" fill="#334155" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
-      뒤꿈치 염증을 신속히 배출하고 아킬레스건을 이완하는 맞춤 약침
+      스트레스로 굳은 인후부 기체를 풀고 점막을 적시는 반하후박탕 &amp; 보폐고
     </text>
   </g>
 
@@ -63,10 +63,10 @@
     <text x="55" y="65" font-size="22" font-weight="900" fill="#ffffff" text-anchor="middle" font-family="Pretendard, 'Malgun Gothic', sans-serif">1</text>
     <!-- Card Text -->
     <text x="110" y="46" font-size="19.5" font-weight="900" fill="#0f172a" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
-      종골 부착부 미세 파열 &amp; 족궁(Arch) 분석
+      인후두 역류 &amp; 기체 울결 매핵기 정밀 감별 진단
     </text>
     <text x="110" y="76" font-size="14.5" font-weight="600" fill="#475569" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.01em">
-      비복근 단축 및 발바닥 충격 흡수 장애 진단
+      상부 식도 괄약근 긴장도 및 점막 건조도 종합 평가
     </text>
   </g>
 
@@ -79,10 +79,10 @@
     <text x="55" y="65" font-size="22" font-weight="900" fill="#ffffff" text-anchor="middle" font-family="Pretendard, 'Malgun Gothic', sans-serif">2</text>
     <!-- Card Text -->
     <text x="110" y="46" font-size="19.5" font-weight="900" fill="#0f172a" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
-      족저근막 소염약침 &amp; 종아리 근막 이완
+      전통 옹기 고농축 수제 보폐고 &amp; 반하후박탕 가감방
     </text>
     <text x="110" y="76" font-size="14.5" font-weight="600" fill="#475569" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.01em">
-      뒤꿈치 염증 신속 배출 및 아킬레스건 이완
+      인후 점막에 윤활액을 공급하고 뭉친 담음 삭힘
     </text>
   </g>
 
@@ -95,10 +95,10 @@
     <text x="55" y="65" font-size="22" font-weight="900" fill="#ffffff" text-anchor="middle" font-family="Pretendard, 'Malgun Gothic', sans-serif">3</text>
     <!-- Card Text -->
     <text x="110" y="46" font-size="19.5" font-weight="900" fill="#0f172a" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
-      발목-골반 밸런스 추나 &amp; 재생 치료
+      인후 혈자리 정밀 약침 &amp; 자율신경 안정 침구
     </text>
     <text x="110" y="76" font-size="14.5" font-weight="600" fill="#475569" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.01em">
-      족부 하중 분산 및 재발 없는 보행 복원
+      과열된 교감신경을 진정시키고 목구멍 압박감 즉각 해소
     </text>
   </g>
 

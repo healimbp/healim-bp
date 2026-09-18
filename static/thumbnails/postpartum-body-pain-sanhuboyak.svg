@@ -19,7 +19,7 @@
   <g transform="translate(450, 64)">
     <rect x="-190" y="-22" width="380" height="44" rx="22" fill="#0d9488" />
     <text x="0" y="6" font-size="16.5" font-weight="900" fill="#ffffff" text-anchor="middle" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
-      맞춤보약·피로회복
+      맞춤보약 &amp; 여성 클리닉
     </text>
   </g>
 
@@ -31,23 +31,23 @@
   <!-- Content inside White Card -->
   <!-- 1. Sub-Hook Pill (Light Mint Green Background + Dark Green Bold Text) -->
   <g transform="translate(90, 155)">
-    <rect x="0" y="0" width="580" height="38" rx="8" fill="#ecfdf5" />
-    <text x="16" y="25" font-size="16" font-weight="900" fill="#047857" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
-      찬바람이 뼈마디에 스며들듯 시리고 온몸이 무거운 출산 후 몸조리
+    <rect x="0" y="0" width="620" height="38" rx="8" fill="#ecfdf5" />
+    <text x="16" y="25" font-size="15.5" font-weight="900" fill="#047857" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
+      출산 후 온몸 뼈마디가 시리고 쑤시는 산후풍 증상
     </text>
   </g>
 
   <!-- 2. Main Title (High-Impact Crisp Pitch Black) -->
   <g transform="translate(90, 235)">
-    <text font-size="36" font-weight="900" fill="#0f172a" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.03em">
-      출산 후 온몸 뼈마디 시림과 산후풍 예방, 기혈을 보하는 해아림 1:1 맞춤 산후보약
+    <text font-size="34" font-weight="900" fill="#0f172a" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.03em">
+      산후풍 예방 · 산후 관절통 · 1:1 산후보약
     </text>
   </g>
 
   <!-- 3. Subtitle Description -->
   <g transform="translate(90, 275)">
-    <text font-size="20" font-weight="800" fill="#334155" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
-      자궁 내 오로 배출부터 관절 인대 강화와 기혈 보강까지 단계별 맞춤 처방
+    <text font-size="18.5" font-weight="800" fill="#334155" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
+      이완된 관절과 인대를 조이고 기혈을 돋우는 수유 안심 맞춤 한약
     </text>
   </g>
 
@@ -62,11 +62,11 @@
     <circle cx="55" cy="57" r="24" fill="#0d9488" />
     <text x="55" y="65" font-size="22" font-weight="900" fill="#ffffff" text-anchor="middle" font-family="Pretendard, 'Malgun Gothic', sans-serif">1</text>
     <!-- Card Text -->
-    <text x="110" y="46" font-size="20" font-weight="900" fill="#0f172a" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
-      산후 자궁 회복도 및 기혈 손상 체질 진단
+    <text x="110" y="46" font-size="19.5" font-weight="900" fill="#0f172a" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
+      릴랙신 호르몬 관절 이완 &amp; 기혈 허손 정밀 진단
     </text>
     <text x="110" y="76" font-size="14.5" font-weight="600" fill="#475569" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.01em">
-      분만 형태(자연분만/제왕절개) 및 수유 상태에 맞춘 정밀 분석
+      손목·골반·무릎 시림 및 체온 조절 이상 체크
     </text>
   </g>
 
@@ -78,11 +78,11 @@
     <circle cx="55" cy="57" r="24" fill="#d97706" />
     <text x="55" y="65" font-size="22" font-weight="900" fill="#ffffff" text-anchor="middle" font-family="Pretendard, 'Malgun Gothic', sans-serif">2</text>
     <!-- Card Text -->
-    <text x="110" y="46" font-size="20" font-weight="900" fill="#0f172a" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
-      1단계: 생화탕 기반 자궁 오로·어혈 신속 배출
+    <text x="110" y="46" font-size="19.5" font-weight="900" fill="#0f172a" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
+      오로 배출 1단계 &amp; 기혈 보강 2단계 처방
     </text>
     <text x="110" y="76" font-size="14.5" font-weight="600" fill="#475569" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.01em">
-      자궁 수축을 돕고 남아있는 노폐물을 깨끗이 제거
+      자궁 수축 촉진 및 뼈마디 시림 원천 차단
     </text>
   </g>
 
@@ -94,18 +94,18 @@
     <circle cx="55" cy="57" r="24" fill="#2563eb" />
     <text x="55" y="65" font-size="22" font-weight="900" fill="#ffffff" text-anchor="middle" font-family="Pretendard, 'Malgun Gothic', sans-serif">3</text>
     <!-- Card Text -->
-    <text x="110" y="46" font-size="20" font-weight="900" fill="#0f172a" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
-      2단계: 보허탕·십전대보탕 기반 관절 인대 강화
+    <text x="110" y="46" font-size="19.5" font-weight="900" fill="#0f172a" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
+      수유 중에도 100% 안전한 규격 한약재 조제
     </text>
     <text x="110" y="76" font-size="14.5" font-weight="600" fill="#475569" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.01em">
-      릴랙신 호르몬으로 이완된 관절을 탄탄하게 조이고 기력 회복
+      산모 체력 회복과 신생아 건강을 동시에 지키는 명방
     </text>
   </g>
 
   <!-- 8. Bottom Dark Navy Footer Capsule -->
   <g transform="translate(90, 735)">
     <rect x="0" y="0" width="720" height="54" rx="14" fill="#0f172a" />
-    <text x="360" y="33" font-size="15.5" font-weight="800" fill="#ffffff" text-anchor="middle" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
+    <text x="360" y="33" font-size="15" font-weight="800" fill="#ffffff" text-anchor="middle" font-family="Pretendard, 'Malgun Gothic', sans-serif" letter-spacing="-0.02em">
       해아림한의원 부평점 · 1:1 맞춤 통합진료 클리닉 (부평역 7번 출구 도보 5분)
     </text>
   </g>

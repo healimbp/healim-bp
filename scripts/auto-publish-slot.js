@@ -217,12 +217,21 @@ async function publishColumn(targetCol) {
 
   // Ensure thumbnail exists
   if (!fs.existsSync(thumbPath)) {
-    console.log(`🖼️ 1080x1080 카드 썸네일 생성 중: ${slug}.png`);
+    console.log(`🖼️ 1:1 맞춤 카드 썸네일 생성 중: ${slug}.png`);
     const svg = generateCleanCardSVG({
+      slug,
       title,
       category
     });
-    const resvg = new Resvg(svg, { fitTo: { mode: 'width', value: 1080 } });
+    const fontsDir = path.join(__dirname, 'fonts');
+    const resvg = new Resvg(svg, {
+      fitTo: { mode: 'width', value: 900 },
+      font: {
+        fontDirs: [fontsDir, 'C:\\Windows\\Fonts'],
+        loadSystemFonts: true,
+        defaultFontFamily: 'Pretendard'
+      }
+    });
     fs.writeFileSync(thumbPath, resvg.render().asPng());
   }
 
