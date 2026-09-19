@@ -1,6 +1,6 @@
 ---
 title: "숨쉴 때 콕콕 쑤시는 옆구리와 가슴 통증, 늑간신경통과 담결림 한방 감별 치료"
-date: 2026-09-16T17:00:00+09:00
+date: 2026-09-19T13:00:00+09:00
 category: "척추·관절 통증"
 tags: ["늑간신경통", "옆구리통증", "가슴통증", "흉추추나", "담결림", "소염약침", "부평한의원"]
 thumbnail: "/thumbnails/intercostal-neuralgia-chest-pain.png"

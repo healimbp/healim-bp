@@ -1,6 +1,6 @@
 ---
 title: "귀에서 삐 소리와 빙빙 도는 어지럼증, 경추 정렬과 뇌 혈류를 개선하는 한방 이명 클리닉"
-date: 2026-09-16T21:00:00+09:00
+date: 2026-09-19T17:00:00+09:00
 category: "맞춤보약·피로회복"
 tags: ["이명치료", "어지럼증", "경추성이명", "자율신경실조증", "경추추나", "공진단", "부평한의원"]
 thumbnail: "/thumbnails/tinnitus-dizziness-autonomic-care.png"

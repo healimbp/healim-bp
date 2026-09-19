@@ -3,53 +3,70 @@ const path = require('path');
 
 const baseDir = path.join(__dirname, '..', 'content', 'column');
 
-// 100% Fresh, UNPOSTED Articles on Tistory (Excluding #47, #53, #54, #55, #56, #57, #58)
+// 전체 칼럼 일정표 (오늘 2026-09-19부터 2026-09-28까지 매일 4회 정기 발행)
 const schedulePlan = [
-  // 2026-09-16 (내일)
-  { slug: 'lumbar-disc-sciatica-chuna', date: '2026-09-16T09:00:00+09:00' },
-  { slug: 'sinusitis-chronic-congestion', date: '2026-09-16T13:00:00+09:00' },
-  { slug: 'traffic-accident-whiplash', date: '2026-09-16T17:00:00+09:00' },
-  { slug: 'kyungokhwa-fatigue-recovery', date: '2026-09-16T21:00:00+09:00' },
+  // [1] 오늘 (2026-09-19, 토)
+  { slug: 'de-quervain-wrist-tenosynovitis', date: '2026-09-19T09:00:00+09:00' }, // 이미 발송 완료
+  { slug: 'intercostal-neuralgia-chest-pain', date: '2026-09-19T13:00:00+09:00' },
+  { slug: 'tinnitus-dizziness-autonomic-care', date: '2026-09-19T17:00:00+09:00' },
+  { slug: 'chronic-ankle-instability-chuna', date: '2026-09-19T21:00:00+09:00' },
 
-  // 2026-09-17 (모레)
-  { slug: 'turtle-neck-chuna', date: '2026-09-17T09:00:00+09:00' },
-  { slug: 'vocal-cord-nodules-hoarse-voice', date: '2026-09-17T13:00:00+09:00' },
-  { slug: 'traffic-accident-rib-back-sprain', date: '2026-09-17T17:00:00+09:00' },
-  { slug: 'gongjindan-selection-guide', date: '2026-09-17T21:00:00+09:00' },
+  // [2] 내일 (2026-09-20, 일)
+  { slug: 'allergic-rhinitis-seasonal-bopyego', date: '2026-09-20T09:00:00+09:00' },
+  { slug: 'traffic-accident-autonomic-trauma', date: '2026-09-20T13:00:00+09:00' },
+  { slug: 'postpartum-body-pain-sanhuboyak', date: '2026-09-20T17:00:00+09:00' },
+  { slug: 'cubital-tunnel-ulnar-nerve-chuna', date: '2026-09-20T21:00:00+09:00' },
 
-  // 2026-09-18
-  { slug: 'frozen-shoulder-rotator-cuff', date: '2026-09-18T09:00:00+09:00' },
-  { slug: 'leg-edema-bujonghwan', date: '2026-09-18T13:00:00+09:00' },
-  { slug: 'traffic-accident-concussion-headache', date: '2026-09-18T17:00:00+09:00' },
-  { slug: 'damjeok-reflux-dyspepsia', date: '2026-09-18T21:00:00+09:00' },
+  // [3] 모레 (2026-09-21, 월)
+  { slug: 'myofascial-rhomboid-scapular-pain', date: '2026-09-21T09:00:00+09:00' },
+  { slug: 'globus-hystericus-throat-lump-bopyego', date: '2026-09-21T13:00:00+09:00' },
+  { slug: 'piriformis-syndrome-buttock-sciatica', date: '2026-09-21T17:00:00+09:00' },
+  { slug: 'menopausal-hot-flashes-insomnia-herbal-care', date: '2026-09-21T21:00:00+09:00' },
 
-  // 2026-09-19
-  { slug: 'knee-osteoarthritis-cartilage', date: '2026-09-19T09:00:00+09:00' },
-  { slug: 'morning-facial-hand-edema-bujonghwan', date: '2026-09-19T13:00:00+09:00' },
-  { slug: 'tennis-elbow-lateral-epicondylitis', date: '2026-09-19T17:00:00+09:00' },
-  { slug: 'exam-student-chongmyeongtang', date: '2026-09-19T21:00:00+09:00' },
+  // [4] 2026-09-22 (화)
+  { slug: 'trigger-finger-stenosing-tenosynovitis', date: '2026-09-22T09:00:00+09:00' },
+  { slug: 'traffic-accident-lumbar-disc-sciatica', date: '2026-09-22T13:00:00+09:00' },
+  { slug: 'chronic-laryngitis-hoarseness-bopyego', date: '2026-09-22T17:00:00+09:00' },
+  { slug: 'burnout-syndrome-brain-fatigue-gongjindan', date: '2026-09-22T21:00:00+09:00' },
 
-  // 2026-09-20
-  { slug: 'spinal-stenosis-claudication', date: '2026-09-20T09:00:00+09:00' },
-  { slug: 'night-leg-cramp-circulatory-bujonghwan', date: '2026-09-20T13:00:00+09:00' },
-  { slug: 'golf-elbow-medial-epicondylitis', date: '2026-09-20T17:00:00+09:00' },
-  { slug: 'postpartum-surgery-edema-bujonghwan', date: '2026-09-20T21:00:00+09:00' },
+  // [5] 2026-09-23 (수)
+  { slug: 'hallux-valgus-foot-pain-chuna', date: '2026-09-23T09:00:00+09:00' },
+  { slug: 'traffic-accident-wrist-ankle-impact-sprain', date: '2026-09-23T13:00:00+09:00' },
+  { slug: 'dry-cough-airconditioner-heater-bopyego', date: '2026-09-23T17:00:00+09:00' },
+  { slug: 'male-menopause-stamina-vitality-tonic', date: '2026-09-23T21:00:00+09:00' },
 
-  // 2026-09-21
-  { slug: 'plantar-fasciitis-heel-pain', date: '2026-09-21T09:00:00+09:00' },
-  { slug: 'de-quervain-wrist-tenosynovitis', date: '2026-09-21T13:00:00+09:00' },
+  // [6] 2026-09-24 (목)
+  { slug: 'thoracic-outlet-syndrome-arm-numbness', date: '2026-09-24T09:00:00+09:00' },
+  { slug: 'traffic-accident-tinnitus-dizziness-syndrome', date: '2026-09-24T13:00:00+09:00' },
+  { slug: 'reflux-laryngitis-throat-clearing-bopyego', date: '2026-09-24T17:00:00+09:00' },
+  { slug: 'post-surgery-chemo-recovery-immune-tonic', date: '2026-09-24T21:00:00+09:00' },
 
-  // Past / Already Posted on Tistory (Set to past date so they won't trigger schedule)
-  { slug: 'cervicogenic-headache-neck-chuna', date: '2026-09-14T09:00:00+09:00' },
-  { slug: 'acute-stiff-neck-nakchim', date: '2026-09-14T13:00:00+09:00' },
-  { slug: 'ankle-sprain-ligament-chuna', date: '2026-09-14T17:00:00+09:00' },
-  { slug: 'carpal-tunnel-wrist-pain', date: '2026-09-14T21:00:00+09:00' },
-  { slug: 'chronic-cough-bopyego', date: '2026-09-15T09:00:00+09:00' },
-  { slug: 'chronic-rhinitis-postnasal-drip', date: '2026-09-15T13:00:00+09:00' },
-  { slug: 'tmj-jaw-clicking-pain', date: '2026-09-15T17:00:00+09:00' }
+  // [7] 2026-09-25 (금)
+  { slug: 'pes-anserine-bursitis-knee-pain', date: '2026-09-25T09:00:00+09:00' },
+  { slug: 'traffic-accident-pediatric-night-terrors', date: '2026-09-25T13:00:00+09:00' },
+  { slug: 'pediatric-sinusitis-rhinitis-drainage', date: '2026-09-25T17:00:00+09:00' },
+  { slug: 'pediatric-growth-immunity-herbal-tonic', date: '2026-09-25T21:00:00+09:00' },
+
+  // [8] 2026-09-26 (토)
+  { slug: 'achilles-tendinitis-heel-pain', date: '2026-09-26T09:00:00+09:00' },
+  { slug: 'traffic-accident-clavicle-chest-contusion', date: '2026-09-26T13:00:00+09:00' },
+  { slug: 'bronchiectasis-chronic-phlegm-bopyego', date: '2026-09-26T17:00:00+09:00' },
+  { slug: 'elderly-frailty-appetite-deer-antler-tonic', date: '2026-09-26T21:00:00+09:00' },
+
+  // [9] 2026-09-27 (일)
+  { slug: 'cervical-facet-syndrome-neck-pain', date: '2026-09-27T09:00:00+09:00' },
+  { slug: 'traffic-accident-insurance-treatment-guide', date: '2026-09-27T13:00:00+09:00' },
+  { slug: 'vocal-polyp-voice-restoration-bopyego', date: '2026-09-27T17:00:00+09:00' },
+  { slug: 'exam-student-concentration-chongmyeongtang', date: '2026-09-27T21:00:00+09:00' },
+
+  // [10] 2026-09-28 (월)
+  { slug: 'trapezius-myofascial-pain-syndrome', date: '2026-09-28T09:00:00+09:00' },
+  { slug: 'spondylolisthesis-lumbar-instability-chuna', date: '2026-09-28T13:00:00+09:00' },
+  { slug: 'allergic-rhinitis-cold-air-sensitivity', date: '2026-09-28T17:00:00+09:00' },
+  { slug: 'chronic-fatigue-adrenal-exhaustion-boyak', date: '2026-09-28T21:00:00+09:00' }
 ];
 
-console.log(`📅 총 ${schedulePlan.length}개 칼럼의 일정을 티스토리 기발행 내역과 100% 분리하여 재설정합니다...\n`);
+console.log(`📅 총 ${schedulePlan.length}개 칼럼의 일정을 확정 적용합니다...\n`);
 
 schedulePlan.forEach(({ slug, date }) => {
   const mdPath = path.join(baseDir, slug, 'index.md');
@@ -64,4 +81,4 @@ schedulePlan.forEach(({ slug, date }) => {
   console.log(`✅ [일정 확정] ${date} -> ${slug}`);
 });
 
-console.log('\n🎉 티스토리 기발행 글과 100% 겹치지 않는 신규 발행 캘린더 세팅 완료!');
+console.log('\n🎉 9월 28일까지 매일 4회(09, 13, 17, 21시) 정기 자동발행 캘린더 세팅 완료!');

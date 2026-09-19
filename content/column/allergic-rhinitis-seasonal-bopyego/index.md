@@ -1,6 +1,6 @@
 ---
 title: "환절기마다 반복되는 콧물·재채기·눈 가려움, 코 점막 면역을 회복하는 보폐고 비염 치료"
-date: 2026-09-17T13:00:00+09:00
+date: 2026-09-20T09:00:00+09:00
 category: "호흡기·보폐고"
 tags: ["알레르기비염", "환절기비염", "보폐고", "코막힘치료", "재채기", "부평한의원", "비염한약"]
 thumbnail: "/thumbnails/allergic-rhinitis-seasonal-bopyego.png"

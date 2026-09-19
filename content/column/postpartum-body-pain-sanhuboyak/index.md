@@ -1,6 +1,6 @@
 ---
 title: "출산 후 온몸 뼈마디 시림과 산후풍 예방, 기혈을 보하는 해아림 1:1 맞춤 산후보약"
-date: 2026-09-17T21:00:00+09:00
+date: 2026-09-20T17:00:00+09:00
 category: "맞춤보약·피로회복"
 tags: ["산후보약", "산후풍", "산후회복", "부평산후보약", "오로배출", "관절시림", "산후피로"]
 thumbnail: "/thumbnails/postpartum-body-pain-sanhuboyak.png"
